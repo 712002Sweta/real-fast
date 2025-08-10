@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import TransformProblemSection from './components/TransformProblemSection';
+import HeroTransformSection from './components/HeroTransformSection';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <TransformProblemSection />
+      {/* Animated Background Glow Elements */}
+      <div className="glow-container">
+        <div className="glow-orb glow-orb-1"></div>
+        <div className="glow-orb glow-orb-2"></div>
+        <div className="glow-orb glow-orb-3"></div>
+        <div className="glow-orb glow-orb-4"></div>
+      </div>
+      
+      <HeroTransformSection />
     </div>
   );
 }
