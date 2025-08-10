@@ -326,9 +326,11 @@ const HeroTransformSection = () => {
         </div>
 
         {/* Start Free Pilot Button */}
-        <button className=" border border-gray-700 bg-gray-900/60 text-white px-8 py-2 rounded-lg font-medium text-sm hover:bg-gray-800/20">
-          Start Free Pilot
-        </button>
+        <a href="https://www.realfast.ai/contact">
+          <button className=" border border-gray-700 bg-gray-900/60 text-white px-8 py-2 rounded-lg font-medium text-sm hover:bg-gray-800/20">
+            Start Free Pilot
+          </button>
+        </a>
       </header>
       
       {/* Hero Content */}
@@ -700,9 +702,11 @@ const HeroTransformSection = () => {
           </div>
 
           <div className={`footer-right ${footerElements[1] ? 'animate' : ''}`}>
-            <button className='bg-gray-900/50 py-4 px-9 rounded-xl border border-gray-100/20 text-sm text-white footer-button'>
-              Start Your Free EXO Pilot Sprint
-            </button>
+            <a href="https://www.realfast.ai/contact">
+              <button className='bg-gray-900/50 py-4 px-9 rounded-xl border border-gray-100/20 text-sm text-white footer-button'>
+                Start Your Free EXO Pilot Sprint
+              </button>
+            </a>
           </div>
         </div>
       </footer>
