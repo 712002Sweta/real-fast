@@ -26,29 +26,29 @@ const HeroTransformSection = () => {
   const [heroVisible, setHeroVisible] = useState(false);
   const [heroElements, setHeroElements] = useState([false, false, false, false]); // [title, speakers, form, date]
   const heroRef = useRef(null);
-  
+
   // Webinar Agenda Animation
   const [agendaVisible, setAgendaVisible] = useState(false);
   const agendaRef = useRef(null);
-  
+
   // Transform Section Animation
   const [transformVisible, setTransformVisible] = useState(false);
   const transformRef = useRef(null);
-  
+
   // Problem Section Animation
   const [problemVisible, setProblemVisible] = useState(false);
   const problemRef = useRef(null);
-  
+
   // Benefits Section Animation
   const [benefitsVisible, setBenefitsVisible] = useState(false);
   const [benefitItems, setBenefitItems] = useState([false, false, false]);
   const benefitsRef = useRef(null);
-  
+
   // Case Studies Section Animation
   const [caseStudiesVisible, setCaseStudiesVisible] = useState(false);
   const [caseStudyItems, setCaseStudyItems] = useState([false, false]);
   const caseStudiesRef = useRef(null);
-  
+
   // Footer Section Animation
   const [footerVisible, setFooterVisible] = useState(false);
   const [footerElements, setFooterElements] = useState([false, false]);
@@ -70,7 +70,7 @@ const HeroTransformSection = () => {
           setHeroElements([false, false, false, false]);
         }
       },
-      { 
+      {
         threshold: 0.1,
         rootMargin: '0px 0px'
       }
@@ -98,7 +98,7 @@ const HeroTransformSection = () => {
           setAgendaVisible(false);
         }
       },
-      { 
+      {
         threshold: 0.2,
         rootMargin: '-50px 0px'
       }
@@ -126,7 +126,7 @@ const HeroTransformSection = () => {
           setTransformVisible(false);
         }
       },
-      { 
+      {
         threshold: 0.3,
         rootMargin: '-30px 0px'
       }
@@ -154,7 +154,7 @@ const HeroTransformSection = () => {
           setProblemVisible(false);
         }
       },
-      { 
+      {
         threshold: 0.3,
         rootMargin: '-40px 0px'
       }
@@ -188,7 +188,7 @@ const HeroTransformSection = () => {
           setBenefitItems([false, false, false]);
         }
       },
-      { 
+      {
         threshold: 0.3,
         rootMargin: '-50px 0px'
       }
@@ -220,7 +220,7 @@ const HeroTransformSection = () => {
           setCaseStudyItems([false, false]);
         }
       },
-      { 
+      {
         threshold: 0.2,
         rootMargin: '-30px 0px'
       }
@@ -252,7 +252,7 @@ const HeroTransformSection = () => {
           setFooterElements([false, false]);
         }
       },
-      { 
+      {
         threshold: 0.3,
         rootMargin: '-30px 0px'
       }
@@ -297,17 +297,17 @@ const HeroTransformSection = () => {
     {
       title: "Strategic Initiatives Stall in Technical Complexity",
       description: "High-value business priorities get buried under system maintenance.",
-      margin: "ml-28"
+      // margin: "ml-28"
     },
     {
       title: "AI Mandates Demand Faster Execution",
       description: "Leadership expects AI-accelerated results, but legacy processes can't keep pace.",
-      margin: "ml-16"
+      // margin: "ml-16"
     },
     {
       title: "Elite Teams Spend 80% on Routine Work",
       description: "Your most capable technical talent spends 80% of time on repetitive tasks instead of breakthrough features.",
-      margin: "ml-4"
+      // margin: "ml-4"
     }
   ];
 
@@ -317,7 +317,7 @@ const HeroTransformSection = () => {
       <div className="absolute inset-0">
         <img src={webpageBg} alt="Webpage Background" className="w-full h-full object-cover object-top" />
       </div>
-      
+
       {/* Header */}
       <header className="relative z-10 flex justify-between items-center px-48 py-4 w-full">
         {/* Logo Section */}
@@ -333,7 +333,7 @@ const HeroTransformSection = () => {
           </button>
         </a>
       </header>
-      
+
       {/* Hero Content */}
       <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
         {/* Left Section - Webinar Details & Speakers */}
@@ -341,27 +341,27 @@ const HeroTransformSection = () => {
           <div className="max-w-2xl">
             {/* Webinar Introduction */}
             <p className={`text-gray-400 text-lg font-normal mb-6 hero-title ${heroElements[0] ? 'animate' : ''}`}>
-            Join us for an exclusive webinar
+              Join us for an exclusive webinar
             </p>
-            
+
             {/* Main Title */}
             <h1 className={`text-[#FAFAFA] text-5xl font-normal mb-3 whitespace-nowrap hero-title ${heroElements[0] ? 'animate' : ''}`}>
               AI-Ready Salesforce
             </h1>
-            
+
             {/* Sub-headline */}
             <div className={`mb-8 hero-title ${heroElements[0] ? 'animate' : ''}`}>
               <h2 className="text-[#FAFAFA] text-3xl font-normal">
                 Transform Your Delivery Speed
               </h2>
             </div>
-            
+
             {/* Date and Time */}
             <div className={`flex items-center space-x-4 mb-10 hero-date ${heroElements[1] ? 'animate' : ''}`}>
               <img src={calendarIcon} alt="Calendar" className="w-6 h-6" />
               <span className="text-[#FAFAFA] text-xl">13 August, 2:00 PM SGT (45 min)</span>
             </div>
-            
+
             {/* Speakers Section */}
             <div className={`flex space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
               {/* Speaker 1 - Heather */}
@@ -369,10 +369,10 @@ const HeroTransformSection = () => {
                 <div className="relative mb-3">
                   <img src={speaker3} alt="Heather Mao" className="w-[84px] h-[84px] rounded-full" />
                   {/* Cloud Icon */}
-                  <img 
-                    src={cloudIcon} 
-                    alt="Cloud" 
-                    className="absolute -bottom-2 -left-2 w-8 h-6 z-10" 
+                  <img
+                    src={cloudIcon}
+                    alt="Cloud"
+                    className="absolute -bottom-2 -left-2 w-8 h-6 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1  mb-1">Heather Mao</p>
@@ -380,32 +380,32 @@ const HeroTransformSection = () => {
                 <p className="text-white text-xs opacity-80 mb-0">Director - Agentforce</p>
                 <p className="text-white text-xs opacity-80">Salesforce</p>
               </div>
-              
+
               {/* Speaker 2 - Sidu */}
               <div className="flex flex-col items-start w-40">
                 <div className="relative mb-3">
                   <img src={speaker1} alt="Sidu Ponnapa" className="w-[84px] h-[84px] rounded-full" />
                   {/* Vector Icon */}
-                  <img 
-                    src={vectorIcon} 
-                    alt="Vector" 
-                    className="absolute -bottom-2 -left-2 w-8 h-4 z-10" 
+                  <img
+                    src={vectorIcon}
+                    alt="Vector"
+                    className="absolute -bottom-2 -left-2 w-8 h-4 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Sidu Ponnapa</p>
                 <p className="text-white text-xs opacity-80 mb-0">CEO & Co-founder</p>
                 <p className="text-white text-xs opacity-80">realfast</p>
               </div>
-              
+
               {/* Speaker 3 - Aakash */}
               <div className="flex flex-col items-start w-40">
                 <div className="relative mb-3">
                   <img src={speaker2} alt="Aakash Dharmadhikari" className="w-[84px] h-[84px] rounded-full" />
                   {/* Vector Icon */}
-                  <img 
-                    src={vectorIcon} 
-                    alt="Vector" 
-                    className="absolute -bottom-2 -left-2 w-8 h-4 z-10" 
+                  <img
+                    src={vectorIcon}
+                    alt="Vector"
+                    className="absolute -bottom-2 -left-2 w-8 h-4 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Aakash Dharmadhikari</p>
@@ -414,7 +414,7 @@ const HeroTransformSection = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Right Section - Registration Form */}
         <div className={`flex-1 flex items-start justify-start pr-40 pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
           <div className="w-full max-w-lg">
@@ -422,7 +422,7 @@ const HeroTransformSection = () => {
             <div className="flex justify-center mb-8">
               <img src={salesforceLogo} alt="Salesforce" className="h-16 w-auto" />
             </div>
-            
+
             <div className="relative">
               <div className="absolute inset-0 rounded-2xl opacity-32 p-[0.5px]">
                 <div className="w-full h-full bg-black/40 rounded-2xl"></div>
@@ -438,7 +438,7 @@ const HeroTransformSection = () => {
                       className="w-full mt-2 px-5 py-2 bg-gray-900/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm"
                     />
                   </div>
-                  
+
                   {/* Email Field */}
                   <div>
                     <input
@@ -448,7 +448,7 @@ const HeroTransformSection = () => {
                       className="w-full mb-4 px-4 py-2 bg-gray-900/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm"
                     />
                   </div>
-                  
+
                   {/* Register Button */}
                   <button
                     type="submit"
@@ -457,10 +457,10 @@ const HeroTransformSection = () => {
                     Register Now
                   </button>
                 </form>
-                
+
                 {/* Disclaimer */}
                 <p className="text-gray-300 text-xs text-center mt-6 leading-relaxed">
-                  This webinar is co-presented with Salesforce and limited to 100 senior technical and business <br/>leaders.
+                  This webinar is co-presented with Salesforce and limited to 100 senior technical and business <br />leaders.
                 </p>
               </div>
             </div>
@@ -490,26 +490,26 @@ const HeroTransformSection = () => {
               if (index === 1) cornerClass = 'corner-bottom-left';
               if (index === 3) cornerClass = 'corner-top-left';
               if (index === 4) cornerClass = 'corner-top-left';
-              
+
               // Don't add border-r to the last column items (index 1 and 4)
               const shouldHaveBorderR = index !== 1 && index !== 4;
-              
+
               return (
-                <div 
+                <div
                   key={index}
                   className={`p-6 md:p-8 ${shouldHaveBorderR ? 'border-r' : ''} border-gray-700/40 ${cornerClass} ${index < 2 ? 'border-b border-gray-700/40' : ''}`}
-              >
-                <div className="flex flex-col items-start gap-4">
-                  <img 
-                    src={item.icon} 
-                    alt={item.alt} 
-                    className="w-10 h-10" 
-                  />
-                  <p className="text-base text-gray-400 leading-snug">
-                    {item.text}
-                  </p>
+                >
+                  <div className="flex flex-col items-start gap-4">
+                    <img
+                      src={item.icon}
+                      alt={item.alt}
+                      className="w-10 h-10"
+                    />
+                    <p className="text-base text-gray-400 leading-snug">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
               );
             })}
           </div>
@@ -524,7 +524,7 @@ const HeroTransformSection = () => {
             <p className={`text-lg text-gray-300 font-normal mb-6 transform-intro ${transformVisible ? 'animate' : ''}`}>
               Introducing EXO
             </p>
-            
+
             {/* Main Headline */}
             <div className="relative">
               <h2 className={`text-4xl md:text-5xl lg:text-6xl font-normal mb-8 leading-tight transform-headline ${transformVisible ? 'animate' : ''}`}>
@@ -532,13 +532,13 @@ const HeroTransformSection = () => {
                 roadmaps into week-long wins
               </h2>
               {/* Vector 6 - positioned like in screenshot */}
-              <img 
-                src={vector6Icon} 
-                alt="Vector 6" 
-                className="absolute -bottom-3 -right-8 w-24 h-10 z-10" 
+              <img
+                src={vector6Icon}
+                alt="Vector 6"
+                className="absolute -bottom-3 -right-8 w-24 h-10 z-10"
               />
             </div>
-            
+
             {/* Sub-headline */}
             <p className={`text-xl md:text-xl text-gray-300 font-normal leading-relaxed transform-sub ${transformVisible ? 'animate' : ''}`}>
               EXO bridges the gap between AI-speed demands<br />
@@ -558,13 +558,14 @@ const HeroTransformSection = () => {
               Leadership Expects AI Results. Teams Deliver at Legacy Speed.
             </h1>
           </div>
-          
+
           {/* Three Column Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 justify-items-start">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-1 ml-24">
             {problemItems.map((item, index) => (
-              <div 
+              <div
                 key={index}
-                className={`${item.margin} text-left max-w-[240px]`}
+                className={`${item.margin} text-left max-w-[240px] md:${item.margin}`}
               >
                 <div className="flex justify-start mb-6">
                   <div className="w-28 h-0.5 bg-gradient-to-r from-[#362CFF] via-[#BFDBFE] to-[#92A7FF]"></div>
@@ -646,65 +647,64 @@ const HeroTransformSection = () => {
       {/* Case Studies Section */}
       <section className="w-full min-h-screen text-white py-16">
         <div ref={caseStudiesRef} className={`w-full flex flex-col items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '13rem', paddingRight: '11rem' }}>
-        {/* Heading */}
-        <h1 className={`font-normal text-4xl mb-16 py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
-          Case Studies
-        </h1>
+          {/* Heading */}
+          <h1 className={`font-normal text-4xl mb-16 py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
+            Case Studies
+          </h1>
 
-        {/* Case Study Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-18 max-w-6xl w-full items-start">
-          {companyData.map((data, index) => (
-            <div
-              key={index}
-              className={`flex flex-col h-full case-study-item ${caseStudyItems[index] ? 'animate' : ''}`}
-              style={{ display: 'grid', gridTemplateRows: 'auto auto 1fr 1fr auto', gap: '1.5rem' }}
-            >
-              {/* Company Name */}
-              <h2 className="text-lg font-light">{data.company}</h2>
+          {/* Case Study Container */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-18 max-w-6xl w-full items-center pl-8">
+            {companyData.map((data, index) => (
+              <div
+                key={index}
+                className={`flex flex-col h-full case-study-item ${caseStudyItems[index] ? 'animate' : ''}`}
+                style={{ display: 'grid', gridTemplateRows: 'auto auto 1fr 1fr auto', gap: '1.5rem' }}
+              >
+                {/* Company Name */}
+                <h2 className="text-lg font-light">{data.company}</h2>
 
-              {/* Challenge */}
-              <div>
-                <p className="text-[#BFDBFE] font-normal text-base mb-1">Challenge</p>
-                <p className="text-gray-400 font-normal text-xl">{data.challenge}</p>
-              </div>
+                {/* Challenge */}
+                <div>
+                  <p className="text-[#BFDBFE] font-normal text-base mb-1">Challenge</p>
+                  <p className="text-gray-400 font-normal text-xl">{data.challenge}</p>
+                </div>
 
-              {/* Scope */}
-              <div>
-                <p className="text-[#BFDBFE] mb-1 font-normal text-base">Scope</p>
-                <div className="text-gray-400 font-normal text-xl">
-                  <div>{data.scope}</div>
+                {/* Scope */}
+                <div>
+                  <p className="text-[#BFDBFE] mb-1 font-normal text-base">Scope</p>
+                  <div className="text-gray-400 font-normal text-xl">
+                    <div>{data.scope}</div>
+                  </div>
+                </div>
+
+                {/* Results */}
+                <div className="relative">
+                  <p className="text-blue-400 mb-1 font-normal text-base">Results</p>
+                  <div className="relative">
+                    <p className="font-semibold tracking-tighter text-3xl max-w-sm">{data.results}</p>
+                    {/* Vector underline - different styling for each case study */}
+                    <img
+                      src={index === 0 ? vector10Icon : vector11Icon}
+                      alt="Results underline"
+                      className={`absolute mt-2 bottom-0 w-auto h-auto z-10 ${index === 0
+                        ? 'left-48' // Left case study positioning
+                        : 'left-28' // Right case study positioning - moved more left
+                        }`}
+                      style={{
+                        transform: 'translateY(10px)',
+                        maxWidth: index === 0 ? '90px' : '80px' // Different sizes
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
-
-                          {/* Results */}
-            <div className="relative">
-              <p className="text-blue-400 mb-1 font-normal text-base">Results</p>
-              <div className="relative">
-                <p className="font-semibold tracking-tighter text-3xl max-w-sm">{data.results}</p>
-                {/* Vector underline - different styling for each case study */}
-                <img 
-                  src={index === 0 ? vector10Icon : vector11Icon} 
-                  alt="Results underline" 
-                  className={`absolute mt-2 bottom-0 w-auto h-auto z-10 ${
-                    index === 0 
-                      ? 'left-48' // Left case study positioning
-                      : 'left-28' // Right case study positioning - moved more left
-                  }`}
-                  style={{ 
-                    transform: 'translateY(10px)',
-                    maxWidth: index === 0 ? '90px' : '80px' // Different sizes
-                  }}
-                />
-              </div>
-            </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Footer Section */}
-      <footer ref={footerRef} className={`w-full h-[400px] relative footer-container ${footerVisible ? 'animate' : ''}`}>
+      <footer ref={footerRef} className={`w-full h-[400px]  relative footer-container ${footerVisible ? 'animate' : ''}`}>
         <div className='py-[110px] flex flex-col lg:flex-row justify-center items-start px-8 lg:gap-[18rem] gap-4'>
           <div className={`text-white text-5xl font-normal footer-left ${footerElements[0] ? 'animate' : ''}`}>
             Transform <br /> Roadmaps into Wins
@@ -719,7 +719,7 @@ const HeroTransformSection = () => {
           </div>
         </div>
       </footer>
-    </section>
+    </section >
   );
 };
 
