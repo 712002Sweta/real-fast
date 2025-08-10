@@ -337,7 +337,7 @@ const HeroTransformSection = () => {
       {/* Hero Content */}
       <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
         {/* Left Section - Webinar Details & Speakers */}
-        <div className="flex-1 flex flex-col justify-start pt-36 pl-48 pr-48">
+        <div className="flex-1 flex flex-col justify-start items-center pt-36 pl-48 pr-48">
           <div className="max-w-2xl">
             {/* Webinar Introduction */}
             <p className={`text-gray-400 text-lg font-normal mb-6 hero-title ${heroElements[0] ? 'animate' : ''}`}>
@@ -365,8 +365,8 @@ const HeroTransformSection = () => {
             {/* Speakers Section */}
             <div className={`flex space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
               {/* Speaker 1 - Heather */}
-              <div className="flex flex-col items-start w-40">
-                <div className="relative mb-3">
+              <div className="flex flex-col items-start justify-center w-40">
+                <div className="relative mb-3 ml-8">
                   <img src={speaker3} alt="Heather Mao" className="w-[84px] h-[84px] rounded-full" />
                   {/* Cloud Icon */}
                   <img
@@ -597,12 +597,12 @@ const HeroTransformSection = () => {
           {/* Right side */}
           <div className={`flex flex-col gap-12 flex-1 benefit-right ${benefitsVisible ? 'animate' : ''}`}>
             {/* Deliver Ahead of Schedule */}
-            <div className={`flex items-start gap-6 benefit-item ${benefitItems[0] ? 'animate' : ''}`}>
+            <div className={`flex lg:items-start items-start justify-start gap-6 benefit-item ${benefitItems[0] ? 'animate' : ''}`}>
               <div className="flex-shrink-0 benefit-icon">
                 <img
                   src={appointmentIcon}
                   alt="Appointment Icon"
-                  className="w-8 h-8 object-contain"
+                  className="w-8 h-8 object-contain mx-auto"
                 />
               </div>
               <div className='flex flex-col gap-2'>
