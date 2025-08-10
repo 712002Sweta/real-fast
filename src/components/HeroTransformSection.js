@@ -4,6 +4,7 @@ import logo from '../assets/hero-section/logo.png';
 import calendarIcon from '../assets/hero-section/calendar.png';
 import cloudIcon from '../assets/hero-section/cloud.png';
 import vectorIcon from '../assets/hero-section/Vector.png';
+import vector6Icon from '../assets/Vector 6.png';
 import vector10Icon from '../assets/Vector 10.png';
 import vector11Icon from '../assets/Vector 11.png';
 import speaker1 from '../assets/hero-section/speaker1.png';
@@ -525,10 +526,18 @@ const HeroTransformSection = () => {
             </p>
             
             {/* Main Headline */}
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-normal mb-8 leading-tight transform-headline ${transformVisible ? 'animate' : ''}`}>
-              Transform never-ending<br />
-              roadmaps into week-long wins
-            </h2>
+            <div className="relative">
+              <h2 className={`text-4xl md:text-5xl lg:text-6xl font-normal mb-8 leading-tight transform-headline ${transformVisible ? 'animate' : ''}`}>
+                Transform never-ending<br />
+                roadmaps into week-long wins
+              </h2>
+              {/* Vector 6 - positioned like in screenshot */}
+              <img 
+                src={vector6Icon} 
+                alt="Vector 6" 
+                className="absolute -bottom-3 -right-8 w-24 h-10 z-10" 
+              />
+            </div>
             
             {/* Sub-headline */}
             <p className={`text-xl md:text-xl text-gray-300 font-normal leading-relaxed transform-sub ${transformVisible ? 'animate' : ''}`}>
@@ -678,8 +687,8 @@ const HeroTransformSection = () => {
                   alt="Results underline" 
                   className={`absolute mt-2 bottom-0 w-auto h-auto z-10 ${
                     index === 0 
-                      ? 'left-44' // Left case study positioning
-                      : 'left-52' // Right case study positioning
+                      ? 'left-48' // Left case study positioning
+                      : 'left-28' // Right case study positioning - moved more left
                   }`}
                   style={{ 
                     transform: 'translateY(10px)',

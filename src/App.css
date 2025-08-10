@@ -491,7 +491,7 @@
   .problem-container {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
-    padding-top: 8rem !important;
+    padding-top: 4rem !important;
   }
   
   .problem-container > div {
@@ -502,23 +502,77 @@
   .problem-container h1 {
     margin-left: 0 !important;
     text-align: center !important;
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+  }
+  
+  /* Problem section grid items */
+  .problem-container .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .problem-container .grid > div {
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .problem-container .grid h3 {
+    font-size: clamp(1.25rem, 4vw, 1.5rem) !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .problem-container .grid p {
+    font-size: clamp(0.875rem, 3vw, 1rem) !important;
+    line-height: 1.5 !important;
   }
   
   /* Benefits section */
   .benefit-container {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
   
   .benefit-container > div {
     flex-direction: column !important;
     max-width: 100% !important;
-    gap: 2rem !important;
+    gap: 3rem !important;
   }
   
   .benefit-container > div > div:first-child {
     max-width: 100% !important;
     text-align: center !important;
+  }
+  
+  .benefit-container > div > div:first-child h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+  }
+  
+  .benefit-container > div > div:first-child div:first-child {
+    font-size: clamp(1rem, 3vw, 1.125rem) !important;
+  }
+  
+  /* Benefits items */
+  .benefit-container .benefit-item {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+  
+  .benefit-container .benefit-item > div:first-child {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .benefit-container .benefit-item h3 {
+    font-size: clamp(1.125rem, 4vw, 1.25rem) !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .benefit-container .benefit-item p {
+    font-size: clamp(0.875rem, 3vw, 1rem) !important;
+    line-height: 1.5 !important;
   }
   
   /* Case studies section */
@@ -635,6 +689,12 @@
   height: 100vh;
   pointer-events: none;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glow-container.show {
+  opacity: 1;
 }
 
 .glow-orb {
