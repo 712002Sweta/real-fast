@@ -326,7 +326,7 @@ const HeroTransformSection = () => {
       } else {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      
+
       // Clear form
       e.target.reset();
 
@@ -338,7 +338,7 @@ const HeroTransformSection = () => {
 
     } catch (error) {
       console.log("Fetch failed, trying alternative method:", error);
-      
+
       // Fallback: Try with no-cors mode as backup
       try {
         const fallbackResponse = await fetch(webAppUrl, {
@@ -349,18 +349,18 @@ const HeroTransformSection = () => {
           },
           body: JSON.stringify(data),
         });
-        
+
         console.log("Fallback submission completed");
         setSubmitSuccess(true);
         setSubmitMessage("Registration recorded! You'll receive webinar details soon.");
-        
+
       } catch (fallbackError) {
         console.log("Both methods failed, but data was logged:", fallbackError);
         // Even if both fail, we'll still show success since the data is captured
         setSubmitSuccess(true);
         setSubmitMessage("Registration recorded! You'll receive webinar details soon.");
       }
-      
+
       // Clear form
       e.target.reset();
 
@@ -423,20 +423,20 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex justify-between items-center px-52 py-4 w-full">
+      <span className="relative z-10 flex flex-row justify-between items-center px-48 py-4 w-full">
         {/* Logo Section */}
-        <div className="flex items-center">
-          <span className="text-white text-xl font-normal mr-2">Exo by</span>
+        <div className="flex items-center space-x-2">
+          <span className="text-white text-xl font-normal">Exo by</span>
           <img src={logo} alt="realfast" className="h-6 w-auto" />
         </div>
 
         {/* Start Free Pilot Button */}
-        <a href="https://www.realfast.ai/contact">
-          <button className=" border border-gray-700 bg-gray-900/60 text-white px-8 py-2 rounded-lg font-medium text-sm hover:bg-gray-800/20">
+        <a href="https://www.realfast.ai/contact" className="">
+          <button className="w-full sm:w-auto border border-gray-700 bg-gray-900/60 text-white px-8 py-2 rounded-lg font-medium text-sm hover:bg-gray-800/20">
             Start Free Pilot
           </button>
         </a>
-      </header>
+      </span>
 
       {/* Hero Content */}
       <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
@@ -522,7 +522,7 @@ const HeroTransformSection = () => {
         {/* Right Section - Registration Form */}
         <div className={`flex-1 flex items-start justify-start pr-40 md:pr-40 pr-8 pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
           <div className="w-full max-w-lg">
-         
+
             <div className="flex justify-center mb-8">
               <img src={salesforceLogo} alt="Salesforce" className="h-12 md:h-16 w-auto" />
             </div>
@@ -541,9 +541,8 @@ const HeroTransformSection = () => {
                       name="name"
                       placeholder="Full Name"
                       required
-                      className={`w-full mt-2 px-5 py-2 bg-gray-900/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm ${
-                        formErrors.name ? 'border-red-500' : 'border-gray-600/50'
-                      }`}
+                      className={`w-full mt-2 px-5 py-2 bg-gray-900/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm ${formErrors.name ? 'border-red-500' : 'border-gray-600/50'
+                        }`}
                     />
                     {formErrors.name && (
                       <p className="text-gray-400 text-xs mt-1">{formErrors.name}</p>
@@ -558,9 +557,8 @@ const HeroTransformSection = () => {
                       name="email"
                       placeholder="Email Address"
                       required
-                      className={`w-full px-4 py-2 bg-gray-900/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm ${
-                        formErrors.email ? 'border-red-500' : 'border-gray-600/50'
-                      }`}
+                      className={`w-full px-4 py-2 bg-gray-900/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 text-sm ${formErrors.email ? 'border-red-500' : 'border-gray-600/50'
+                        }`}
                     />
                     {formErrors.email && (
                       <p className="text-gray-400 text-xs mt-1">{formErrors.email}</p>
@@ -583,9 +581,9 @@ const HeroTransformSection = () => {
                 )}
 
                 {/* Disclaimer */}
-                                  <p className="text-gray-400 text-xs text-center mt-6 leading-relaxed">
-                    This webinar is co-presented with Salesforce and limited to 100 senior technical and business leaders.
-                  </p>
+                <p className="text-gray-400 text-xs text-center mt-6 leading-relaxed">
+                  This webinar is co-presented with Salesforce and limited to 100 senior technical and business leaders.
+                </p>
               </div>
             </div>
           </div>
@@ -810,13 +808,12 @@ const HeroTransformSection = () => {
                     <img
                       src={index === 0 ? vector10Icon : vector11Icon}
                       alt="Results underline"
-                      className={`absolute bottom-0 w-auto h-auto z-10 ${
-                        index === 0 
-                          ? 'left-1/2 transform -translate-x-1/2' // Center for left case study (5 hours)
-                          : 'left-1/4 transform -translate-x-1/2' // More left for right case study (8 hours)
-                      }`}
+                      className={`absolute bottom-0 w-auto h-auto z-10 ${index === 0
+                        ? 'left-1/2 transform -translate-x-1/2' // Center for left case study (5 hours)
+                        : 'left-1/4 transform -translate-x-1/2' // More left for right case study (8 hours)
+                        }`}
                       style={{
-                        transform: index === 0 
+                        transform: index === 0
                           ? 'translate(-50%, 12px)' // Center horizontally, move down more for 5 hours
                           : 'translate(-50%, 8px)', // Center horizontally, move down slightly for 8 hours
                         maxWidth: '80px',
