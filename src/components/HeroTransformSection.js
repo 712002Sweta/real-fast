@@ -602,7 +602,7 @@ const HeroTransformSection = () => {
               <div className="h-full flex flex-col justify-center">
                 <p className="text-sm text-gray-400 font-normal mb-3">Webinar Agenda</p>
                 <h2 className="text-xl md:text-2xl font-medium leading-snug text-white/64">
-                  Why traditional IT delivery models are failing in the AI era
+                  Why traditional IT delivery models are failing in the AI era.
                 </h2>
               </div>
             </div>
