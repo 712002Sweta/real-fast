@@ -399,6 +399,16 @@ body, html {
 
 /* Responsive Design - Mobile and Tablet Fixes */
 @media (max-width: 1200px) {
+  /* Handle form squishing on landscape tablets and smaller screens */
+  .hero-container > div:first-child {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  .hero-container > div:last-child {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
   /* Header adjustments */
   header {
     padding-left: 2rem !important;
@@ -688,6 +698,24 @@ body, html {
   
   .pt-36 {
     padding-top: 2rem !important;
+  }
+}
+
+/* Landscape tablet and smaller screen fixes */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hero-container > div:first-child {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .hero-container > div:last-child {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .hero-form > div {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 }
 
