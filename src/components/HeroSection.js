@@ -19,7 +19,7 @@ const HeroSection = ({
   return (
     <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
       {/* Left Section - Webinar Details & Speakers */}
-      <div className="flex-1 flex flex-col md:flex-col flex-row justify-start items-center md:items-center items-start pt-36 md:pt-36 pt-20 pl-52 pr-40 md:pl-52 md:pr-40 pl-8 pr-8">
+      <div className="flex-1 flex flex-col md:flex-col flex-row justify-start items-center md:items-center items-start pt-20 md:pt-36 pl-4 pr-4 md:pl-52 md:pr-40">
         <div className="max-w-2xl">
           {/* Webinar Introduction */}
           <p className={`text-gray-400 text-sm md:text-lg font-normal mb-3 md:mb-6 hero-title ${heroElements[0] ? 'animate' : ''}`}>
@@ -27,7 +27,7 @@ const HeroSection = ({
           </p>
 
           {/* Main Title */}
-          <h1 className={`text-[#FAFAFA] text-2xl md:text-5xl font-normal mb-2 md:mb-3 whitespace-nowrap hero-title ${heroElements[0] ? 'animate' : ''}`}>
+          <h1 className={`text-[#FAFAFA] text-2xl md:text-5xl font-normal mb-2 md:mb-3 hero-title ${heroElements[0] ? 'animate' : ''}`}>
             AI-Ready Salesforce
           </h1>
 
@@ -44,61 +44,67 @@ const HeroSection = ({
             <span className="text-[#FAFAFA] text-sm md:text-xl">13 August, 2:00 PM SGT (45 min)</span>
           </div>
 
-          {/* Speakers Section */}
-          <div className={`flex space-x-4 md:space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
-            {/* Speaker 1 - Heather */}
-            <div className="flex flex-col items-start w-20 md:w-40">
-              <div className="relative mb-2 md:mb-3">
-                <img src={speaker3} alt="Heather Mao" className="w-[60px] h-[60px] md:w-[84px] md:h-[84px] rounded-full" />
-                {/* Cloud Icon */}
-                <img
-                  src={cloudIcon}
-                  alt="Cloud"
-                  className="absolute -bottom-1 -left-1 w-6 h-4 md:w-8 md:h-6 z-10"
-                />
+                      {/* Speakers Section */}
+            <div className={`flex flex-row justify-between md:justify-start space-x-1 md:space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
+              {/* Speaker 1 - Heather */}
+              <div className="flex flex-col items-center md:items-start w-20 md:w-40">
+                <div className="relative mb-1 md:mb-3">
+                  <img src={speaker3} alt="Heather Mao" className="w-[28px] h-[28px] md:w-[84px] md:h-[84px] rounded-full" />
+                  {/* Cloud Icon */}
+                  <img
+                    src={cloudIcon}
+                    alt="Cloud"
+                    className="absolute -bottom-1 -left-1 w-2 h-1 md:w-8 md:h-6 z-10"
+                  />
+                </div>
+                <div className="flex flex-col items-center md:items-start">
+                  <p className="text-white text-xs md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-center md:text-left leading-tight">Heather Mao</p>
+                  <p className="text-white text-xs opacity-80 mb-0 hidden md:block">Strategic Account</p>
+                  <p className="text-white text-xs opacity-80 mb-0 hidden md:block">Director - Agentforce</p>
+                  <p className="text-white text-xs opacity-80 hidden md:block">Salesforce</p>
+                </div>
               </div>
-              <p className="text-white text-sm md:text-xl font-semibold mt-1 mb-1">Heather Mao</p>
-              <p className="text-white text-xs opacity-80 mb-0">Strategic Account</p>
-              <p className="text-white text-xs opacity-80 mb-0">Director - Agentforce</p>
-              <p className="text-white text-xs opacity-80">Salesforce</p>
-            </div>
 
-            {/* Speaker 2 - Sidu */}
-            <div className="flex flex-col items-start w-20 md:w-40">
-              <div className="relative mb-2 md:mb-3">
-                <img src={speaker1} alt="Sidu Ponnapa" className="w-[60px] h-[60px] md:w-[84px] md:h-[84px] rounded-full" />
-                {/* Vector Icon */}
-                <img
-                  src={vectorIcon}
-                  alt="Vector"
-                  className="absolute -bottom-1 -left-1 w-6 h-4 md:w-8 md:h-4 z-10"
-                />
+              {/* Speaker 2 - Sidu */}
+              <div className="flex flex-col items-center md:items-start w-20 md:w-40">
+                <div className="relative mb-1 md:mb-3">
+                  <img src={speaker1} alt="Sidu Ponnapa" className="w-[28px] h-[28px] md:w-[84px] md:h-[84px] rounded-full" />
+                  {/* Vector Icon */}
+                  <img
+                    src={vectorIcon}
+                    alt="Vector"
+                    className="absolute -bottom-1 -left-1 w-2 h-1 md:w-8 md:h-4 z-10"
+                  />
+                </div>
+                <div className="flex flex-col items-center md:items-start">
+                  <p className="text-white text-xs md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-center md:text-left leading-tight">Sidu Ponnapa</p>
+                  <p className="text-white text-xs opacity-80 mb-0 hidden md:block">CEO & Co-Founder</p>
+                  <p className="text-white text-xs opacity-80 hidden md:block">realfast</p>
+                </div>
               </div>
-              <p className="text-white text-sm md:text-xl font-semibold mt-1 mb-1">Sidu Ponnapa</p>
-              <p className="text-white text-xs opacity-80 mb-0">CEO & Co-Founder</p>
-              <p className="text-white text-xs opacity-80">realfast</p>
-            </div>
 
-            {/* Speaker 3 - Aakash */}
-            <div className="flex flex-col items-start w-20 md:w-40">
-              <div className="relative mb-2 md:mb-3">
-                <img src={speaker2} alt="Aakash Dharmadhikari" className="w-[60px] h-[60px] md:w-[84px] md:h-[84px] rounded-full" />
-                {/* Vector Icon */}
-                <img
-                  src={vectorIcon}
-                  alt="Vector"
-                  className="absolute -bottom-1 -left-1 w-6 h-4 md:w-8 md:h-4 z-10"
-                />
+              {/* Speaker 3 - Aakash */}
+              <div className="flex flex-col items-center md:items-start w-20 md:w-40">
+                <div className="relative mb-1 md:mb-3">
+                  <img src={speaker2} alt="Aakash Dharmadhikari" className="w-[28px] h-[28px] md:w-[84px] md:h-[84px] rounded-full" />
+                  {/* Vector Icon */}
+                  <img
+                    src={vectorIcon}
+                    alt="Vector"
+                    className="absolute -bottom-1 -left-1 w-2 h-1 md:w-8 md:h-4 z-10"
+                  />
+                </div>
+                <div className="flex flex-col items-center md:items-start">
+                  <p className="text-white text-xs md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-center md:text-left leading-tight">Aakash<br />Dharmadhikari</p>
+                  <p className="text-white text-xs opacity-80 hidden md:block">CPTO & Co-Founder, Realfast</p>
+                </div>
               </div>
-              <p className="text-white text-sm md:text-xl font-semibold mt-1 mb-1">Aakash Dharmadhikari</p>
-              <p className="text-white text-xs opacity-80">CPTO & Co-Founder, Realfast</p>
             </div>
-          </div>
         </div>
       </div>
 
-      {/* Right Section - Registration Form */}
-      <div className={`flex-1 flex items-start justify-start pr-40 md:pr-40 pr-8 pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
+              {/* Right Section - Registration Form */}
+        <div className={`flex-1 flex items-start justify-start pr-4 md:pr-40 pt-20 md:pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
         <div className="w-full max-w-lg">
           <div className="flex justify-center mb-8">
             <img src={salesforceLogo} alt="Salesforce" className="h-12 md:h-16 w-auto" />

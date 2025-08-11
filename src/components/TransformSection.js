@@ -3,9 +3,9 @@ import vector6Icon from '../assets/Vector 6.png';
 
 const TransformSection = ({ transformVisible, transformRef }) => {
   return (
-    <div ref={transformRef} className={`relative py-28 transform-container ${transformVisible ? 'animate' : ''}`}>
-      <div className="relative z-10 h-80 flex items-center justify-center px-48">
-        <div className="text-center text-white mt-10 max-w-4xl">
+        <div ref={transformRef} className={`relative py-16 md:py-28 transform-container ${transformVisible ? 'animate' : ''}`}>
+      <div className="relative z-10 h-60 md:h-80 flex items-center justify-center px-4 md:px-48">
+                  <div className="text-center text-white mt-4 md:mt-10 max-w-4xl">
           {/* Introducing EXO */}
           <p className={`text-lg text-[#BFDBFE] font-normal mb-3 transform-intro ${transformVisible ? 'animate' : ''}`}>
             Introducing EXO

@@ -366,13 +366,13 @@ const HeroTransformSection = () => {
 
 
   return (
-    <section className="relative min-h-screen  overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={webpageBg}
           alt="Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 

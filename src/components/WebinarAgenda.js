@@ -35,15 +35,15 @@ const WebinarAgenda = ({ agendaVisible, agendaRef }) => {
   ];
 
   return (
-    <div ref={agendaRef} className={`relative mt-8 pb-8 px-40 agenda-container ${agendaVisible ? 'animate' : ''}`}>
+        <div ref={agendaRef} className={`relative mt-8 md:mt-0 pb-4 md:pb-8 px-4 md:px-40 agenda-container ${agendaVisible ? 'animate' : ''}`}>
       <div className="max-w-7xl mx-auto text-white">
         {/* 2x3 Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3">
           {/* Grid Item 1 - Webinar Agenda Title */}
-          <div className="p-6 md:p-8 border-b border-r border-gray-700/40 corner-bottom-right">
+          <div className="p-3 md:p-8 border-b md:border-b border-r md:border-r border-gray-700/40 corner-bottom-right">
             <div className="h-full flex flex-col justify-center">
-              <p className="text-sm text-gray-400 font-normal mb-3">Webinar Agenda</p>
-              <h2 className="text-xl md:text-2xl font-medium leading-snug text-white/64">
+              <p className="text-sm text-gray-400 font-normal mb-2 md:mb-3">Webinar Agenda</p>
+              <h2 className="text-lg md:text-2xl font-medium leading-snug text-white/64">
                 Why traditional IT delivery models are failing in the AI era.
               </h2>
             </div>
@@ -61,21 +61,21 @@ const WebinarAgenda = ({ agendaVisible, agendaRef }) => {
             const shouldHaveBorderR = index !== 1 && index !== 4;
 
             return (
-              <div
-                key={index}
-                className={`p-6 md:p-8 ${shouldHaveBorderR ? 'border-r' : ''} border-gray-700/40 ${cornerClass} ${index < 2 ? 'border-b border-gray-700/40' : ''}`}
-              >
-                <div className="flex flex-col items-start gap-4">
-                  <img
-                    src={item.icon}
-                    alt={item.alt}
-                    className="w-10 h-10"
-                  />
-                  <p className="text-base text-gray-400 leading-snug">
-                    {item.text}
-                  </p>
+                                              <div
+                  key={index}
+                  className={`p-3 md:p-8 ${shouldHaveBorderR ? 'md:border-r' : ''} border-gray-700/40 ${cornerClass} ${index < 2 ? 'md:border-b' : ''}`}
+                >
+                  <div className="flex flex-col items-start gap-1 md:gap-4">
+                    <img
+                      src={item.icon}
+                      alt={item.alt}
+                      className="w-6 h-6 md:w-10 md:h-10"
+                    />
+                    <p className="text-xs md:text-base text-gray-400 leading-snug">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
             );
           })}
         </div>

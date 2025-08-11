@@ -19,43 +19,43 @@ const CaseStudiesSection = ({ caseStudiesVisible, caseStudiesRef, caseStudyItems
   ];
 
   return (
-    <section className="w-full min-h-screen text-white pt-0 pb-0">
-      <div ref={caseStudiesRef} className={`w-full flex flex-col items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '13rem', paddingRight: '11rem' }}>
+    <section className="w-full min-h-screen text-white pt-8 md:pt-0 pb-0">
+      <div ref={caseStudiesRef} className={`w-full flex flex-col items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '1rem', paddingRight: '1rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
         {/* Heading */}
-        <h1 className={`font-normal text-4xl mb-16 py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
-          Case Studies
-        </h1>
+                  <h1 className={`font-normal text-3xl md:text-4xl mb-6 md:mb-16 py-2 md:py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
+            Case Studies
+          </h1>
 
-        {/* Case Study Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-28 max-w-6xl w-full items-stretch pl-8">
+          {/* Case Study Container */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-28 max-w-6xl w-full items-stretch pl-0 md:pl-8">
           {companyData.map((data, index) => (
-            <div
-              key={index}
-              className={`flex flex-col h-full case-study-item ${caseStudyItems[index] ? 'animate' : ''}`}
-              style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', minHeight: '400px' }}
-            >
-              {/* Company Name */}
-              <h2 className="text-lg font-light">{data.company}</h2>
+                          <div
+                key={index}
+                className={`flex flex-col h-full case-study-item ${caseStudyItems[index] ? 'animate' : ''}`}
+                style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', minHeight: '280px' }}
+              >
+                              {/* Company Name */}
+                <h2 className="text-base md:text-lg font-light">{data.company}</h2>
 
-              {/* Challenge */}
-              <div className="flex-shrink-0">
-                <p className="text-[#BFDBFE] font-normal text-base mb-1">Challenge</p>
-                <p className="text-gray-400 font-normal text-xl">{data.challenge}</p>
-              </div>
-
-              {/* Scope */}
-              <div className="flex-shrink-0">
-                <p className="text-[#BFDBFE] mb-1 font-normal text-base">Scope</p>
-                <div className="text-gray-400 font-normal text-xl">
-                  <div>{data.scope}</div>
+                {/* Challenge */}
+                <div className="flex-shrink-0">
+                  <p className="text-[#BFDBFE] font-normal text-sm md:text-base mb-1">Challenge</p>
+                  <p className="text-gray-400 font-normal text-lg md:text-xl">{data.challenge}</p>
                 </div>
-              </div>
 
-              {/* Results */}
-              <div className="relative flex-shrink-0">
-                <p className="text-blue-400 mb-1 font-normal text-base">Results</p>
-                <div className="relative">
-                  <p className="font-semibold tracking-tighter text-3xl max-w-sm">{data.results}</p>
+                {/* Scope */}
+                <div className="flex-shrink-0">
+                  <p className="text-[#BFDBFE] mb-1 font-normal text-sm md:text-base">Scope</p>
+                  <div className="text-gray-400 font-normal text-lg md:text-xl">
+                    <div>{data.scope}</div>
+                  </div>
+                </div>
+
+                {/* Results */}
+                <div className="relative flex-shrink-0">
+                  <p className="text-blue-400 mb-1 font-normal text-sm md:text-base">Results</p>
+                  <div className="relative">
+                    <p className="font-semibold tracking-tighter text-2xl md:text-3xl max-w-sm">{data.results}</p>
                   {/* Vector underline - responsive positioning for different screen sizes */}
                   <img
                     src={index === 0 ? vector10Icon : vector11Icon}
