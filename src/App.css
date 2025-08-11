@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 .App {
   text-align: left;
   min-height: 100vh;
   background: linear-gradient(to bottom, #000000 0%, #040619 100%);
   position: relative;
   overflow: hidden;
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Ensure content stays above background effects */
@@ -95,24 +98,24 @@
 
 .benefit-left {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(30px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .benefit-left.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .benefit-right {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateY(30px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .benefit-right.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .benefit-item {
@@ -208,14 +211,14 @@
 
 .hero-date {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   transition-delay: 0.5s;
 }
 
 .hero-date.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .hero-speakers {
@@ -232,14 +235,14 @@
 
 .hero-form {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   transition-delay: 0.9s;
 }
 
 .hero-form.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /* Motion animations for Webinar Agenda section */
@@ -316,26 +319,26 @@
 
 .problem-title {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateY(30px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   transition-delay: 0.2s;
 }
 
 .problem-title.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .problem-headline {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   transition-delay: 0.4s;
 }
 
 .problem-headline.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /* Motion animations for Footer section */
@@ -355,26 +358,26 @@
 
 .footer-left {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(30px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   transition-delay: 0.2s;
 }
 
 .footer-left.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-.footer-right {
+.footer-button {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateY(30px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   transition-delay: 0.4s;
 }
 
-.footer-right.animate {
+.footer-button.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .footer-button {
@@ -387,6 +390,11 @@
 
 .footer-button:active {
   transform: scale(0.95);
+}
+
+/* Global font family */
+body, html {
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Responsive Design - Mobile and Tablet Fixes */

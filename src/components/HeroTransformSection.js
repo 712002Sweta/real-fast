@@ -65,10 +65,8 @@ const HeroTransformSection = () => {
           setTimeout(() => setHeroElements(prev => [prev[0], true, prev[2], prev[3]]), 500); // date
           setTimeout(() => setHeroElements(prev => [prev[0], prev[1], true, prev[3]]), 700); // speakers
           setTimeout(() => setHeroElements(prev => [prev[0], prev[1], prev[2], true]), 900); // form
-        } else if (!entry.isIntersecting && heroVisible) {
-          setHeroVisible(false);
-          setHeroElements([false, false, false, false]);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.1,
@@ -94,9 +92,8 @@ const HeroTransformSection = () => {
       ([entry]) => {
         if (entry.isIntersecting && !agendaVisible) {
           setAgendaVisible(true);
-        } else if (!entry.isIntersecting && agendaVisible) {
-          setAgendaVisible(false);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.2,
@@ -122,9 +119,8 @@ const HeroTransformSection = () => {
       ([entry]) => {
         if (entry.isIntersecting && !transformVisible) {
           setTransformVisible(true);
-        } else if (!entry.isIntersecting && transformVisible) {
-          setTransformVisible(false);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.3,
@@ -150,9 +146,8 @@ const HeroTransformSection = () => {
       ([entry]) => {
         if (entry.isIntersecting && !problemVisible) {
           setProblemVisible(true);
-        } else if (!entry.isIntersecting && problemVisible) {
-          setProblemVisible(false);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.3,
@@ -182,11 +177,8 @@ const HeroTransformSection = () => {
           setTimeout(() => setBenefitItems(prev => [true, prev[1], prev[2]]), 600);
           setTimeout(() => setBenefitItems(prev => [prev[0], true, prev[2]]), 800);
           setTimeout(() => setBenefitItems(prev => [prev[0], prev[1], true]), 1000);
-        } else if (!entry.isIntersecting && benefitsVisible) {
-          // Reset animations when section leaves viewport
-          setBenefitsVisible(false);
-          setBenefitItems([false, false, false]);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.3,
@@ -214,11 +206,8 @@ const HeroTransformSection = () => {
           // Stagger the case study items animation
           setTimeout(() => setCaseStudyItems(prev => [true, prev[1]]), 400);
           setTimeout(() => setCaseStudyItems(prev => [prev[0], true]), 700);
-        } else if (!entry.isIntersecting && caseStudiesVisible) {
-          // Reset animations when section leaves viewport
-          setCaseStudiesVisible(false);
-          setCaseStudyItems([false, false]);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.2,
@@ -246,11 +235,8 @@ const HeroTransformSection = () => {
           // Stagger the footer elements animation
           setTimeout(() => setFooterElements(prev => [true, prev[1]]), 200);
           setTimeout(() => setFooterElements(prev => [prev[0], true]), 400);
-        } else if (!entry.isIntersecting && footerVisible) {
-          // Reset animations when section leaves viewport
-          setFooterVisible(false);
-          setFooterElements([false, false]);
         }
+        // Removed the else if block to prevent animation reset on scroll back
       },
       {
         threshold: 0.3,
@@ -365,8 +351,8 @@ const HeroTransformSection = () => {
             {/* Speakers Section */}
             <div className={`flex space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
               {/* Speaker 1 - Heather */}
-              <div className="flex flex-col items-start justify-center w-40">
-                <div className="relative mb-3 ml-8">
+              <div className="flex flex-col items-start w-40">
+                <div className="relative mb-3">
                   <img src={speaker3} alt="Heather Mao" className="w-[84px] h-[84px] rounded-full" />
                   {/* Cloud Icon */}
                   <img
@@ -393,7 +379,7 @@ const HeroTransformSection = () => {
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Sidu Ponnapa</p>
-                <p className="text-white text-xs opacity-80 mb-0">CEO & Co-founder</p>
+                <p className="text-white text-xs opacity-80 mb-0">CEO & Co-Founder</p>
                 <p className="text-white text-xs opacity-80">realfast</p>
               </div>
 
@@ -409,7 +395,7 @@ const HeroTransformSection = () => {
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Aakash Dharmadhikari</p>
-                <p className="text-white text-xs opacity-80">Co-Founder, realfast</p>
+                <p className="text-white text-xs opacity-80">Co-Founder, Realfast</p>
               </div>
             </div>
           </div>
@@ -459,9 +445,9 @@ const HeroTransformSection = () => {
                 </form>
 
                 {/* Disclaimer */}
-                <p className="text-gray-300 text-xs text-center mt-6 leading-relaxed">
-                  This webinar is co-presented with Salesforce and limited to 100 senior technical and business <br />leaders.
-                </p>
+                                  <p className="text-gray-400 text-xs text-center mt-6 leading-relaxed">
+                    This webinar is co-presented with Salesforce and limited to 100 senior technical and business leaders.
+                  </p>
               </div>
             </div>
           </div>
@@ -469,7 +455,7 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Webinar Agenda Section */}
-      <div ref={agendaRef} className={`relative py-20 px-48 agenda-container ${agendaVisible ? 'animate' : ''}`}>
+      <div ref={agendaRef} className={`relative pt-4 pb-16 px-48 agenda-container ${agendaVisible ? 'animate' : ''}`}>
         <div className="max-w-7xl mx-auto text-white">
           {/* 2x3 Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3">
@@ -517,11 +503,11 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Transform Section */}
-      <div ref={transformRef} className={`relative py-20 transform-container ${transformVisible ? 'animate' : ''}`}>
+      <div ref={transformRef} className={`relative py-32 transform-container ${transformVisible ? 'animate' : ''}`}>
         <div className="relative z-10 h-80 flex items-center justify-center px-48">
           <div className="text-center text-white mt-10 max-w-4xl">
             {/* Introducing EXO */}
-            <p className={`text-lg text-gray-300 font-normal mb-6 transform-intro ${transformVisible ? 'animate' : ''}`}>
+            <p className={`text-lg text-[#BFDBFE] font-normal mb-3 transform-intro ${transformVisible ? 'animate' : ''}`}>
               Introducing EXO
             </p>
 
@@ -540,7 +526,7 @@ const HeroTransformSection = () => {
             </div>
 
             {/* Sub-headline */}
-            <p className={`text-xl md:text-xl text-gray-300 font-normal leading-relaxed transform-sub ${transformVisible ? 'animate' : ''}`}>
+            <p className={`text-xl md:text-xl text-gray-400 font-normal leading-relaxed transform-sub ${transformVisible ? 'animate' : ''}`}>
               EXO bridges the gap between AI-speed demands<br />
               and legacy delivery processes.
             </p>
@@ -549,11 +535,11 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Problem Section */}
-      <div ref={problemRef} className={`relative pt-44 pb-20 px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
+      <div ref={problemRef} className={`relative pt-32 pb-16 px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
         <div className="max-w-6xl mx-auto text-white">
           {/* Section Title */}
           <div className="text-left mb-20">
-            <h2 className={`text-lg font-normal text-[#BFDBFE] ml-24 mb-4 problem-title ${problemVisible ? 'animate' : ''}`}>The Problem</h2>
+            <h2 className={`text-lg font-normal text-[#BFDBFE] ml-24 mb-3 problem-title ${problemVisible ? 'animate' : ''}`}>The Problem</h2>
             <h1 className={`text-3xl md:text-3xl ml-24 font-normal leading-tight problem-headline ${problemVisible ? 'animate' : ''}`}>
               Leadership Expects AI Results. Teams Deliver at Legacy Speed.
             </h1>
@@ -567,13 +553,13 @@ const HeroTransformSection = () => {
                 key={index}
                 className={`${item.margin} text-left max-w-[240px] md:${item.margin}`}
               >
-                <div className="flex justify-start mb-6">
-                  <div className="w-28 h-0.5 bg-gradient-to-r from-[#362CFF] via-[#BFDBFE] to-[#92A7FF]"></div>
+                <div className="flex justify-start mb-4">
+                  <div className="w-16 h-0.5 bg-[#BFDBFE]"></div>
                 </div>
-                <h3 className="text-xl md:text-xl font-normal mb-8 text-left">
+                <h3 className="text-xl md:text-xl font-normal mb-4 text-left">
                   {item.title}
                 </h3>
-                <p className="text-gray-300 text-base font-normal leading-relaxed text-left">
+                <p className="text-gray-400 text-base font-normal leading-relaxed text-left">
                   {item.description}
                 </p>
               </div>
@@ -583,19 +569,19 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Benefits Section */}
-      <div ref={benefitsRef} className={`text-white w-full min-h-screen flex justify-center items-center pt-16 benefit-container ${benefitsVisible ? 'animate' : ''}`}>
+      <div ref={benefitsRef} className={`text-white w-full min-h-screen flex justify-center items-center pt-8 benefit-container ${benefitsVisible ? 'animate' : ''}`}>
         {/* Container */}
-        <div className='w-full flex flex-col gap-16 max-w-6xl lg:flex-row' style={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
+        <div className='w-full flex flex-col gap-16 max-w-6xl lg:flex-row' style={{ paddingLeft: '9rem', paddingRight: '8rem' }}>
           {/* Left side */}
-          <div className={`flex flex-col gap-3 max-w-md benefit-left ${benefitsVisible ? 'animate' : ''}`}>
+          <div className={`flex flex-col gap-1 max-w-md benefit-left ${benefitsVisible ? 'animate' : ''}`}>
             <div className='text-[rgba(191,219,254,1)] font-medium text-lg py-2'>The Benefits</div>
             <div className='text-white font-normal text-4xl md:text-4xl lg:text-4xl leading-tight'>
-              Stop SalesForce <br /> Delivery Blocking AI
+              Stop Salesforce <br /> Delivery Blocking AI
             </div>
           </div>
 
           {/* Right side */}
-          <div className={`flex flex-col gap-12 flex-1 benefit-right ${benefitsVisible ? 'animate' : ''}`}>
+          <div className={`flex flex-col ml-12 gap-12 flex-1 benefit-right ${benefitsVisible ? 'animate' : ''}`}>
             {/* Deliver Ahead of Schedule */}
             <div className={`flex lg:items-start items-start justify-start gap-6 benefit-item ${benefitItems[0] ? 'animate' : ''}`}>
               <div className="flex-shrink-0 benefit-icon">
@@ -607,7 +593,7 @@ const HeroTransformSection = () => {
               </div>
               <div className='flex flex-col gap-2'>
                 <h3 className="text-xl font-normal">Deliver Ahead of Schedule</h3>
-                <p className="text-base font-normal text-gray-300">Transform 3-week development cycles into 1-day sprints.</p>
+                <p className="text-base font-normal text-gray-400">Transform 3-week development cycles into 1-day sprints.</p>
               </div>
             </div>
 
@@ -622,7 +608,7 @@ const HeroTransformSection = () => {
               </div>
               <div className='flex flex-col gap-2'>
                 <h3 className="text-xl font-normal">Show Faster AI ROI</h3>
-                <p className="text-base font-normal text-gray-300">Demonstrate measurable AI returns to executives by freeing teams from routine work.</p>
+                <p className="text-base font-normal text-gray-400">Demonstrate measurable AI returns to executives by freeing teams from routine work.</p>
               </div>
             </div>
 
@@ -637,7 +623,7 @@ const HeroTransformSection = () => {
               </div>
               <div className='flex flex-col gap-2'>
                 <h3 className="text-xl font-normal">Track Every Change Made</h3>
-                <p className="text-base font-normal text-gray-300">Every change tracked, every decision documented for complete visibility.</p>
+                <p className="text-base font-normal text-gray-400">Every change tracked, every decision documented for complete visibility.</p>
               </div>
             </div>
           </div>
@@ -645,7 +631,7 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Case Studies Section */}
-      <section className="w-full min-h-screen text-white py-16">
+      <section className="w-full min-h-screen text-white py-8">
         <div ref={caseStudiesRef} className={`w-full flex flex-col items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '13rem', paddingRight: '11rem' }}>
           {/* Heading */}
           <h1 className={`font-normal text-4xl mb-16 py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
@@ -653,7 +639,7 @@ const HeroTransformSection = () => {
           </h1>
 
           {/* Case Study Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-18 max-w-6xl w-full items-center pl-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-28 max-w-6xl w-full items-center pl-8">
             {companyData.map((data, index) => (
               <div
                 key={index}
@@ -686,13 +672,13 @@ const HeroTransformSection = () => {
                     <img
                       src={index === 0 ? vector10Icon : vector11Icon}
                       alt="Results underline"
-                      className={`absolute mt-2 bottom-0 w-auto h-auto z-10 ${index === 0
+                      className={`absolute mt-4 bottom-0 w-auto h-auto z-10 ${index === 0
                         ? 'left-48' // Left case study positioning
-                        : 'left-28' // Right case study positioning - moved more left
+                        : 'left-20' // Right case study positioning - moved more left
                         }`}
                       style={{
-                        transform: 'translateY(10px)',
-                        maxWidth: index === 0 ? '90px' : '80px' // Different sizes
+                        transform: 'translateY(14px)',
+                        maxWidth: index === 0 ? '80px' : '80px' // Different sizes
                       }}
                     />
                   </div>
@@ -710,9 +696,9 @@ const HeroTransformSection = () => {
             Transform <br /> Roadmaps into Wins
           </div>
 
-          <div className={`footer-right ${footerElements[1] ? 'animate' : ''}`}>
+          <div>
             <a href="https://www.realfast.ai/contact">
-              <button className='bg-gray-900/50 py-4 px-9 rounded-xl border border-gray-100/20 text-sm text-white footer-button'>
+              <button className={`bg-gray-900/50 py-4 px-9 rounded-xl border border-gray-100/20 text-sm text-white footer-button ${footerElements[1] ? 'animate' : ''}`}>
                 Start Your Free EXO Pilot Sprint
               </button>
             </a>
