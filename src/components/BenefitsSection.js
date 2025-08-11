@@ -5,7 +5,7 @@ import notebookIcon from '../assets/notebook.png';
 
 const BenefitsSection = ({ benefitsVisible, benefitsRef, benefitItems }) => {
   return (
-    <div ref={benefitsRef} className={`text-white w-full min-h-[80vh] md:min-h-screen flex justify-center items-center pt-4 md:pt-0 pb-4 md:pb-0 benefit-container ${benefitsVisible ? 'animate' : ''}`}>
+    <div ref={benefitsRef} className={`text-white w-full  h-[750px] md:h-[800px] flex justify-center items-center pt-4 md:pt-0 pb-4 md:pb-0 benefit-container ${benefitsVisible ? 'animate' : ''}`}>
               {/* Container */}
         <div className='w-full flex flex-col gap-8 md:gap-16 max-w-4xl lg:flex-row px-8 md:px-0' style={{ paddingLeft: '2rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '9rem', paddingRight: '8rem' } }}>
           {/* Left side */}

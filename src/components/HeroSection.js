@@ -45,58 +45,58 @@ const HeroSection = ({
           </div>
 
                       {/* Speakers Section */}
-            <div className={`flex flex-row justify-start md:justify-start space-x-4 md:space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
+            <div className={`flex flex-row justify-start md:justify-start space-x-6 md:space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
               {/* Speaker 1 - Heather */}
-              <div className="flex flex-col items-start md:items-start w-20 md:w-40">
+              <div className="flex flex-col items-start md:items-start w-24 md:w-40">
                 <div className="relative mb-2 md:mb-3">
-                  <img src={speaker3} alt="Heather Mao" className="w-[32px] h-[32px] md:w-[84px] md:h-[84px] rounded-full" />
+                  <img src={speaker3} alt="Heather Mao" className="w-[40px] h-[40px] md:w-[84px] md:h-[84px] rounded-full" />
                   {/* Cloud Icon */}
                   <img
                     src={cloudIcon}
                     alt="Cloud"
-                    className="absolute -bottom-1 -left-1 w-3 h-2 md:w-8 md:h-6 z-10"
+                    className="absolute -bottom-1 -left-1 w-4 h-3 md:w-8 md:h-6 z-10"
                   />
                 </div>
                 <div className="flex flex-col items-start md:items-start">
-                  <p className="text-white text-xs md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Heather Mao</p>
-                  <p className="text-white text-xs opacity-80 mb-0 hidden md:block">Strategic Account</p>
-                  <p className="text-white text-xs opacity-80 mb-0 hidden md:block">Director - Agentforce</p>
-                  <p className="text-white text-xs opacity-80 hidden md:block">Salesforce</p>
+                  <p className="text-white text-sm md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Heather Mao</p>
+                  <p className="text-white text-xs opacity-80 mb-0 md:block">Strategic Account</p>
+                  <p className="text-white text-xs opacity-80 mb-0 md:block">Director - Agentforce</p>
+                  <p className="text-white text-xs opacity-80 md:block">Salesforce</p>
                 </div>
               </div>
 
               {/* Speaker 2 - Sidu */}
-              <div className="flex flex-col items-start md:items-start w-20 md:w-40">
+              <div className="flex flex-col items-start md:items-start w-24 md:w-40">
                 <div className="relative mb-2 md:mb-3">
-                  <img src={speaker1} alt="Sidu Ponnapa" className="w-[32px] h-[32px] md:w-[84px] md:h-[84px] rounded-full" />
+                  <img src={speaker1} alt="Sidu Ponnapa" className="w-[40px] h-[40px] md:w-[84px] md:h-[84px] rounded-full" />
                   {/* Vector Icon */}
                   <img
                     src={vectorIcon}
                     alt="Vector"
-                    className="absolute -bottom-1 -left-1 w-3 h-2 md:w-8 md:h-4 z-10"
+                    className="absolute -bottom-1 -left-1 w-4 h-3 md:w-8 md:h-4 z-10"
                   />
                 </div>
                 <div className="flex flex-col items-start md:items-start">
-                  <p className="text-white text-xs md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Sidu Ponnapa</p>
-                  <p className="text-white text-xs opacity-80 mb-0 hidden md:block">CEO & Co-Founder</p>
-                  <p className="text-white text-xs opacity-80 hidden md:block">realfast</p>
+                  <p className="text-white text-sm md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Sidu Ponnapa</p>
+                  <p className="text-white text-xs opacity-80 mb-0 md:block">CEO & Co-Founder</p>
+                  <p className="text-white text-xs opacity-80 md:block">realfast</p>
                 </div>
               </div>
 
               {/* Speaker 3 - Aakash */}
-              <div className="flex flex-col items-start md:items-start w-20 md:w-40">
+              <div className="flex flex-col items-start md:items-start w-24 md:w-40">
                 <div className="relative mb-2 md:mb-3">
-                  <img src={speaker2} alt="Aakash Dharmadhikari" className="w-[32px] h-[32px] md:w-[84px] md:h-[84px] rounded-full" />
+                  <img src={speaker2} alt="Aakash Dharmadhikari" className="w-[40px] h-[40px] md:w-[84px] md:h-[84px] rounded-full" />
                   {/* Vector Icon */}
                   <img
                     src={vectorIcon}
                     alt="Vector"
-                    className="absolute -bottom-1 -left-1 w-3 h-2 md:w-8 md:h-4 z-10"
+                    className="absolute -bottom-1 -left-1 w-4 h-3 md:w-8 md:h-4 z-10"
                   />
                 </div>
                 <div className="flex flex-col items-start md:items-start">
-                  <p className="text-white text-xs md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Aakash<br />Dharmadhikari</p>
-                  <p className="text-white text-xs opacity-80 hidden md:block">CPTO & Co-Founder, Realfast</p>
+                  <p className="text-white text-sm md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Aakash<br />Dharmadhikari</p>
+                  <p className="text-white text-xs opacity-80 md:block">CPTO & Co-Founder, Realfast</p>
                 </div>
               </div>
             </div>
