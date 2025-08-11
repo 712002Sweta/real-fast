@@ -441,7 +441,7 @@ const HeroTransformSection = () => {
       {/* Hero Content */}
       <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
         {/* Left Section - Webinar Details & Speakers */}
-        <div className="flex-1 flex flex-col justify-start items-center pt-36 pl-52 pr-40">
+        <div className="flex-1 flex flex-col justify-start items-center md:items-center items-start pt-36 pl-52 pr-40 md:pl-52 md:pr-40 pl-8 pr-8">
           <div className="max-w-2xl">
             {/* Webinar Introduction */}
             <p className={`text-gray-400 text-lg font-normal mb-6 hero-title ${heroElements[0] ? 'animate' : ''}`}>
@@ -493,7 +493,7 @@ const HeroTransformSection = () => {
                   <img
                     src={vectorIcon}
                     alt="Vector"
-                    className="absolute -bottom-1 -right-2 w-8 h-4 z-10"
+                    className="absolute -bottom-1 -left-1 w-8 h-4 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Sidu Ponnapa</p>
@@ -509,7 +509,7 @@ const HeroTransformSection = () => {
                   <img
                     src={vectorIcon}
                     alt="Vector"
-                    className="absolute -bottom-1 -right-2 w-8 h-4 z-10"
+                    className="absolute -bottom-1 -left-1 w-8 h-4 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Aakash Dharmadhikari</p>
@@ -520,18 +520,18 @@ const HeroTransformSection = () => {
         </div>
 
         {/* Right Section - Registration Form */}
-        <div className={`flex-1 flex items-start justify-start pr-40 pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
+        <div className={`flex-1 flex items-start justify-start pr-40 md:pr-40 pr-8 pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
           <div className="w-full max-w-lg">
          
             <div className="flex justify-center mb-8">
-              <img src={salesforceLogo} alt="Salesforce" className="h-16 w-auto" />
+              <img src={salesforceLogo} alt="Salesforce" className="h-12 md:h-16 w-auto" />
             </div>
 
             <div className="relative">
               <div className="absolute inset-0 rounded-2xl opacity-32 p-[0.5px]">
                 <div className="w-full h-full bg-black/40 rounded-2xl"></div>
               </div>
-              <div className="relative z-10 p-8">
+              <div className="relative z-10 p-6 md:p-8">
                 <form className="space-y-4" id="webinar-registration" onSubmit={handleWebinarRegistration}>
                   {/* Full Name Field */}
                   <div className="form-group">
@@ -571,7 +571,7 @@ const HeroTransformSection = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-[#1D4ED8] hover:bg-blue-800 text-white font-medium py-4 px-6 rounded-xl text-sm primary-button large"
+                    className="w-full bg-[#1D4ED8] hover:bg-blue-800 text-white font-medium py-3 md:py-4 px-4 md:px-6 rounded-xl text-xs md:text-sm primary-button large"
                   >
                     {isSubmitting ? 'Registering...' : submitSuccess ? 'Registration Successful!' : 'Register for Webinar'}
                   </button>
