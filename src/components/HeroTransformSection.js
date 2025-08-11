@@ -833,7 +833,7 @@ const HeroTransformSection = () => {
       </section>
 
       {/* Footer Section */}
-      <footer ref={footerRef} className={`w-full h-[300px]  relative footer-container ${footerVisible ? 'animate' : ''}`}>
+      <footer ref={footerRef} className={`w-full h-[300px] pt-12 relative footer-container ${footerVisible ? 'animate' : ''}`}>
         <div className='py-[5px] flex flex-col lg:flex-row justify-center items-start px-8 lg:gap-[18rem] gap-4'>
           <div className={`text-white text-5xl font-normal footer-left ${footerElements[0] ? 'animate' : ''}`}>
             Transform <br /> Roadmaps into Wins
