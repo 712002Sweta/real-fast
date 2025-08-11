@@ -673,7 +673,7 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Problem Section */}
-      <div ref={problemRef} className={`relative pt-32 pb-12 px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
+      <div ref={problemRef} className={`relative pt-24 pb-4 px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
         <div className="max-w-6xl mx-auto text-white">
           {/* Section Title */}
           <div className="text-left mb-20">
@@ -769,7 +769,7 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Case Studies Section */}
-      <section className="w-full min-h-screen text-white py-4">
+      <section className="w-full min-h-screen text-white pt-0 pb-0">
         <div ref={caseStudiesRef} className={`w-full flex flex-col items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '13rem', paddingRight: '11rem' }}>
           {/* Heading */}
           <h1 className={`font-normal text-4xl mb-16 py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
@@ -777,24 +777,24 @@ const HeroTransformSection = () => {
           </h1>
 
           {/* Case Study Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-28 max-w-6xl w-full items-center pl-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-28 max-w-6xl w-full items-stretch pl-8">
             {companyData.map((data, index) => (
               <div
                 key={index}
                 className={`flex flex-col h-full case-study-item ${caseStudyItems[index] ? 'animate' : ''}`}
-                style={{ display: 'grid', gridTemplateRows: 'auto auto 1fr 1fr auto', gap: '1.5rem' }}
+                style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', minHeight: '400px' }}
               >
                 {/* Company Name */}
                 <h2 className="text-lg font-light">{data.company}</h2>
 
                 {/* Challenge */}
-                <div>
+                <div className="flex-shrink-0">
                   <p className="text-[#BFDBFE] font-normal text-base mb-1">Challenge</p>
                   <p className="text-gray-400 font-normal text-xl">{data.challenge}</p>
                 </div>
 
                 {/* Scope */}
-                <div>
+                <div className="flex-shrink-0">
                   <p className="text-[#BFDBFE] mb-1 font-normal text-base">Scope</p>
                   <div className="text-gray-400 font-normal text-xl">
                     <div>{data.scope}</div>
@@ -802,11 +802,11 @@ const HeroTransformSection = () => {
                 </div>
 
                 {/* Results */}
-                <div className="relative">
+                <div className="relative flex-shrink-0 mt-auto">
                   <p className="text-blue-400 mb-1 font-normal text-base">Results</p>
                   <div className="relative">
                     <p className="font-semibold tracking-tighter text-3xl max-w-sm">{data.results}</p>
-                    {/* Vector underline - responsive positioning for different screen sizes */}
+                    {/* Vector underline - fixed positioning */}
                     <img
                       src={index === 0 ? vector10Icon : vector11Icon}
                       alt="Results underline"
@@ -834,7 +834,7 @@ const HeroTransformSection = () => {
 
       {/* Footer Section */}
       <footer ref={footerRef} className={`w-full h-[300px]  relative footer-container ${footerVisible ? 'animate' : ''}`}>
-        <div className='py-[20px] flex flex-col lg:flex-row justify-center items-start px-8 lg:gap-[18rem] gap-4'>
+        <div className='py-[5px] flex flex-col lg:flex-row justify-center items-start px-8 lg:gap-[18rem] gap-4'>
           <div className={`text-white text-5xl font-normal footer-left ${footerElements[0] ? 'animate' : ''}`}>
             Transform <br /> Roadmaps into Wins
           </div>
