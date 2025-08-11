@@ -404,7 +404,7 @@ const HeroTransformSection = () => {
         {/* Right Section - Registration Form */}
         <div className={`flex-1 flex items-start justify-start pr-40 pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
           <div className="w-full max-w-lg">
-            {/* Salesforce Logo - Above the card */}
+         
             <div className="flex justify-center mb-8">
               <img src={salesforceLogo} alt="Salesforce" className="h-16 w-auto" />
             </div>
