@@ -21,7 +21,7 @@ const TransformSection = ({ transformVisible, transformRef }) => {
             <img
               src={vector6Icon}
               alt="Vector 6"
-              className="absolute -bottom-3 -right-8 w-24 h-10 z-10"
+              className="absolute -bottom-3 -right-8 w-24 h-10 z-10 hidden md:block"
             />
           </div>
 

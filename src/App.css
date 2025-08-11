@@ -67,6 +67,16 @@
   z-index: 10;
 }
 
+/* Hide corner borders on mobile */
+@media (max-width: 768px) {
+  .corner-bottom-right::before,
+  .corner-bottom-left::before,
+  .corner-top-left::before,
+  .corner-top-right::before {
+    display: none;
+  }
+}
+
 .corner-bottom-left {
   position: relative;
 }

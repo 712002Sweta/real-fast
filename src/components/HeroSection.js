@@ -17,7 +17,7 @@ const HeroSection = ({
   handleWebinarRegistration 
 }) => {
   return (
-    <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
+    <div ref={heroRef} className={`relative z-10 flex min-h-[90vh] md:min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
       {/* Left Section - Webinar Details & Speakers */}
       <div className="flex-1 flex flex-col md:flex-col flex-row justify-start items-center md:items-center items-start pt-20 md:pt-36 pl-4 pr-4 md:pl-52 md:pr-40">
         <div className="max-w-2xl">
