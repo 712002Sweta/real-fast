@@ -812,13 +812,13 @@ const HeroTransformSection = () => {
                       alt="Results underline"
                       className={`absolute bottom-0 w-auto h-auto z-10 ${
                         index === 0 
-                          ? 'left-1/2 transform -translate-x-1/2' // Center for left case study
-                          : 'left-1/3 transform -translate-x-1/2' // Left-aligned for right case study
+                          ? 'left-1/2 transform -translate-x-1/2' // Center for left case study (5 hours)
+                          : 'left-1/4 transform -translate-x-1/2' // More left for right case study (8 hours)
                       }`}
                       style={{
                         transform: index === 0 
-                          ? 'translate(-50%, 8px)' // Center horizontally, move down slightly
-                          : 'translate(-50%, 8px)', // Center horizontally, move down slightly
+                          ? 'translate(-50%, 12px)' // Center horizontally, move down more for 5 hours
+                          : 'translate(-50%, 8px)', // Center horizontally, move down slightly for 8 hours
                         maxWidth: '80px',
                         width: 'auto',
                         height: 'auto'
