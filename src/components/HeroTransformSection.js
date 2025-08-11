@@ -305,7 +305,7 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex justify-between items-center px-48 py-4 w-full">
+      <header className="relative z-10 flex justify-between items-center px-52 py-4 w-full">
         {/* Logo Section */}
         <div className="flex items-center">
           <span className="text-white text-xl font-normal mr-2">Exo by</span>
@@ -323,7 +323,7 @@ const HeroTransformSection = () => {
       {/* Hero Content */}
       <div ref={heroRef} className={`relative z-10 flex min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
         {/* Left Section - Webinar Details & Speakers */}
-        <div className="flex-1 flex flex-col justify-start items-center pt-36 pl-48 pr-48">
+        <div className="flex-1 flex flex-col justify-start items-center pt-36 pl-52 pr-40">
           <div className="max-w-2xl">
             {/* Webinar Introduction */}
             <p className={`text-gray-400 text-lg font-normal mb-6 hero-title ${heroElements[0] ? 'animate' : ''}`}>
@@ -455,7 +455,7 @@ const HeroTransformSection = () => {
       </div>
 
       {/* Webinar Agenda Section */}
-      <div ref={agendaRef} className={`relative pt-4 pb-16 px-48 agenda-container ${agendaVisible ? 'animate' : ''}`}>
+      <div ref={agendaRef} className={`relative pt-4 pb-16 px-44 agenda-container ${agendaVisible ? 'animate' : ''}`}>
         <div className="max-w-7xl mx-auto text-white">
           {/* 2x3 Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3">
