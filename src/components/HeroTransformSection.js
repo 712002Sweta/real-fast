@@ -493,7 +493,7 @@ const HeroTransformSection = () => {
                   <img
                     src={vectorIcon}
                     alt="Vector"
-                    className="absolute -bottom-1 -left-1 w-8 h-4 z-10"
+                    className="absolute -bottom-1 -right-2 w-8 h-4 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Sidu Ponnapa</p>
@@ -509,7 +509,7 @@ const HeroTransformSection = () => {
                   <img
                     src={vectorIcon}
                     alt="Vector"
-                    className="absolute -bottom-1 -left-1 w-8 h-4 z-10"
+                    className="absolute -bottom-1 -right-2 w-8 h-4 z-10"
                   />
                 </div>
                 <p className="text-white text-xl font-semibold mt-1 mb-1">Aakash Dharmadhikari</p>
