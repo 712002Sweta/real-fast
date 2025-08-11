@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = ({ footerVisible, footerRef, footerElements }) => {
   return (
     <footer ref={footerRef} className={`w-full h-[180px] md:h-[300px] relative footer-container mt-8 md:mt-0 ${footerVisible ? 'animate' : ''}`}>
-      <div className='py-[5px] md:py-[10px] flex flex-col lg:flex-row justify-start items-start px-4 md:px-8 lg:gap-[16rem] gap-4' style={{ paddingLeft: '1rem', paddingRight: '1rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
+      <div className='py-[5px] md:py-[10px] flex flex-col lg:flex-row justify-start items-start px-8 md:px-8 lg:gap-[16rem] gap-4' style={{ paddingLeft: '2rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
         <div className={`text-white text-3xl md:text-5xl font-normal footer-left text-center md:text-left ${footerElements[0] ? 'animate' : ''}`}>
           Transform <br /> Roadmaps into Wins
         </div>

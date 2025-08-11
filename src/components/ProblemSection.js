@@ -20,7 +20,7 @@ const ProblemSection = ({ problemVisible, problemRef }) => {
   ];
 
   return (
-          <div ref={problemRef} className={`relative pt-24 pb-4 px-4 md:px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
+          <div ref={problemRef} className={`relative pt-24 pb-4 px-8 md:px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
       <div className="max-w-6xl mx-auto text-white">
         {/* Section Title */}
                   <div className="text-left mb-20">
