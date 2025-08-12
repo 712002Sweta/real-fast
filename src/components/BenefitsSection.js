@@ -7,10 +7,10 @@ const BenefitsSection = ({ benefitsVisible, benefitsRef, benefitItems }) => {
   return (
     <div ref={benefitsRef} className={`text-white w-full  h-[750px] md:h-[800px] flex justify-center items-center pt-4 md:pt-0 pb-4 md:pb-0 benefit-container ${benefitsVisible ? 'animate' : ''}`}>
               {/* Container */}
-        <div className='w-full flex flex-col gap-8 md:gap-16 max-w-4xl lg:flex-row px-8 md:px-0' style={{ paddingLeft: '2rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '9rem', paddingRight: '8rem' } }}>
+        <div className='w-full flex flex-col gap-8 md:gap-16 max-w-4xl lg:flex-row px-4 md:px-0' style={{ paddingLeft: '1rem', paddingRight: '1rem', '@media (min-width: 768px)': { paddingLeft: '9rem', paddingRight: '8rem' } }}>
           {/* Left side */}
           <div className={`flex flex-col gap-1 max-w-md benefit-left text-left ${benefitsVisible ? 'animate' : ''}`}>
-            <div className='text-[rgba(191,219,254,1)] font-medium text-lg py-2 text-left md:text-left'>The Benefits</div>
+            <div className='text-[#BFDBFE] font-medium text-lg py-2 text-left md:text-left'>The Benefits</div>
             <div className='text-white font-normal text-2xl md:text-4xl lg:text-4xl leading-tight text-left md:text-left'>
               Stop Salesforce <br /> Delivery Blocking AI
             </div>

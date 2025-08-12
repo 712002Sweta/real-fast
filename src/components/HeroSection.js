@@ -13,7 +13,7 @@ const HeroSection = ({
   handleWebinarRegistration 
 }) => {
   return (
-    <div ref={heroRef} className={`relative z-10 flex  h-[800px] md:h-[750px] pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
+    <div ref={heroRef} className={`relative z-1 flex  h-[850px] md:h-[780px] pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
       {/* Left Section - Webinar Details & Speakers */}
       <div className="flex-1 flex md:flex-col flex-row justify-start items-start md:items-center pt-12 md:pt-36 pl-6 pr-6 md:pl-52 md:pr-40">
         <div className="max-w-2xl w-full" style={{ width: '100%' }}>
@@ -53,7 +53,8 @@ const HeroSection = ({
               {/* Right Section - Registration Form */}
         <div className={`flex-1 flex items-start justify-start pr-6 md:pr-48 pt-8 md:pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
         <div className="w-full max-w-lg">
-          <div className="flex justify-center mb-4 md:mb-8">
+          {/* Salesforce Logo - Hidden on mobile, shown above form on desktop */}
+          <div className="hidden md:flex justify-center mb-4 md:mb-8">
             <img src={salesforceLogo} alt="Salesforce" className="h-12 md:h-16 w-auto" />
           </div>
 
@@ -116,6 +117,11 @@ const HeroSection = ({
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Salesforce Logo - Shown below form container on mobile only */}
+        <div className="flex md:hidden justify-center mt-2 mb-6">
+          <img src={salesforceLogo} alt="Salesforce" className="h-12 md:h-16 w-auto" />
         </div>
       </div>
     </div>
