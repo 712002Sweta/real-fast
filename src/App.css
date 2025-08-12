@@ -217,8 +217,7 @@
 .hero-title {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  transition-delay: 0.3s;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hero-title.animate {
@@ -229,8 +228,7 @@
 .hero-date {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  transition-delay: 0.5s;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .hero-date.animate {
@@ -241,8 +239,9 @@
 .hero-speakers {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  transition-delay: 0.7s;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .hero-speakers.animate {
@@ -253,8 +252,7 @@
 .hero-form {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  transition-delay: 0.9s;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .hero-form.animate {

@@ -50,19 +50,19 @@ const SpeakersSection = ({ heroElements, isVisible }) => {
 
             {s.name === 'Heather Mao' && (
               <>
-                <p className="text-white text-[10px] md:text-xs opacity-80">Strategic Account</p>
-                <p className="text-white text-[10px] md:text-xs opacity-80">Director - Agentforce</p>
-                <p className="text-white text-[10px] md:text-xs opacity-80">Salesforce</p>
+                <p className="text-white text-[8px] md:text-xs opacity-80">Strategic Account</p>
+                <p className="text-white text-[8px] md:text-xs opacity-80">Director - Agentforce</p>
+                <p className="text-white text-[8px] md:text-xs opacity-80">Salesforce</p>
               </>
             )}
             {s.name === 'Sidu Ponnapa' && (
               <>
-                <p className="text-white text-[10px] md:text-xs opacity-80">CEO & Co-Founder</p>
-                <p className="text-white text-[10px] md:text-xs opacity-80">realfast</p>
+                <p className="text-white text-[8px] md:text-xs opacity-80">CEO & Co-Founder</p>
+                <p className="text-white text-[8px] md:text-xs opacity-80">realfast</p>
               </>
             )}
             {s.name === 'Aakash Dharmadhikari' && (
-              <p className="text-white text-[10px] md:text-xs opacity-80">CPTO & Co-Founder, realfast</p>
+              <p className="text-white text-[8px] md:text-xs opacity-80">CPTO & Co-Founder, realfast</p>
             )}
           </div>
         </div>

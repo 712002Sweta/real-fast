@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <header className="relative z-10 w-full">
-      <div className="flex flex-row justify-between items-center md:px-52 py-3 md:py-4">
+      <div className="flex flex-row justify-between items-center px-0 md:px-32 lg:px-24 xl:px-52 py-3 md:py-4">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <span className="text-white text-xs md:text-xl font-normal">Exo by</span>
@@ -125,23 +125,13 @@ const Header = () => {
       >
         <div
           ref={panelRef}
-          className="bg-[#0b0b0b]/95 backdrop-blur-sm border border-gray-700/30 rounded-xl w-64 overflow-hidden shadow-2xl"
+          className="bg-[#0b0b0b]/95 backdrop-blur-sm border border-gray-700/30 rounded-xl w-44 overflow-hidden shadow-2xl"
         >
 
           {/* Links */}
-          <nav className="px-6 py-6 relative z-10">
+          <nav className="px-2 py-2 relative z-10">
             <ul className="flex flex-col gap-1">
               <li>
-                <a
-                  href="https://www.realfast.ai/people"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 text-white/90 text-sm font-medium hover:text-white hover:bg-gray-800/30 transition-all duration-200 cursor-pointer"
-                >
-                  People
-                </a>
-              </li>
               <li>
                 <a
                   href="https://www.realfast.ai/career"
@@ -153,6 +143,17 @@ const Header = () => {
                   Careers
                 </a>
               </li>
+                <a
+                  href="https://www.realfast.ai/people"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                  className="block rounded-lg px-4 py-3 text-white/90 text-sm font-medium hover:text-white hover:bg-gray-800/30 transition-all duration-200 cursor-pointer"
+                >
+                  People
+                </a>
+              </li>
+            
               <li>
                 <a
                   href="https://www.realfast.ai/blog"
@@ -169,7 +170,7 @@ const Header = () => {
             {/* CTA */}
             <div className="mt-6 relative z-10">
               <a href="https://www.realfast.ai/contact" onClick={closeMenu} className="block">
-                <button className="w-full bg-gray-900/50 py-3 px-6 rounded-xl border border-gray-100/20 text-sm text-white hover:bg-gray-800/50 transition-all duration-200 cursor-pointer">
+                <button className="w-full bg-gray-900/50 py-3 px-6 rounded-xl border border-gray-100/20 text-[10px] text-white hover:bg-gray-800/50 transition-all duration-200 cursor-pointer">
                   Start Free Pilot
                 </button>
               </a>

@@ -13,9 +13,9 @@ const HeroSection = ({
   handleWebinarRegistration 
 }) => {
   return (
-    <div ref={heroRef} className={`relative z-1 flex  h-[850px] md:h-[780px] pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
+    <div ref={heroRef} className={`relative z-1 flex  h-[850px] md:h-[780px] pt-0 lg:px-4 hero-container ${heroVisible ? 'animate' : ''}`}>
       {/* Left Section - Webinar Details & Speakers */}
-      <div className="flex-1 flex md:flex-col flex-row justify-start items-start md:items-center pt-12 md:pt-36 pl-6 pr-6 md:pl-52 md:pr-40">
+      <div className="flex-1 flex md:flex-col flex-row justify-start items-start md:items-center pt-12 md:pt-36 pl-6 pr-6 md:pl-48 md:pr-40">
         <div className="max-w-2xl w-full" style={{ width: '100%' }}>
           {/* Webinar Introduction */}
           <p className={`text-gray-400 text-lg md:text-lg font-normal mb-2 md:mb-6 hero-title text-left ${heroElements[0] ? 'animate' : ''}`}>

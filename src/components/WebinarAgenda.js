@@ -35,7 +35,7 @@ const WebinarAgenda = ({ agendaVisible, agendaRef }) => {
   ];
 
   return (
-        <div ref={agendaRef} className={`relative mt-8 md:mt-0 pb-4 md:pb-8 px-8 md:px-44 agenda-container ${agendaVisible ? 'animate' : ''}`}>
+        <div ref={agendaRef} className={`relative mt-8 md:mt-0 pb-4 lg:px-16 xl:px-44  md:pb-8 px-8  agenda-container ${agendaVisible ? 'animate' : ''}`}>
       <div className="max-w-7xl mx-auto text-white">
         {/* 2x3 Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3">

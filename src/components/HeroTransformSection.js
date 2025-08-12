@@ -56,10 +56,10 @@ const HeroTransformSection = () => {
         if (entry.isIntersecting && !heroVisible) {
           setHeroVisible(true);
           // Stagger hero elements animation
-          setTimeout(() => setHeroElements(prev => [true, prev[1], prev[2], prev[3]]), 300); // title
-          setTimeout(() => setHeroElements(prev => [prev[0], true, prev[2], prev[3]]), 500); // date
-          setTimeout(() => setHeroElements(prev => [prev[0], prev[1], true, prev[3]]), 700); // speakers
-          setTimeout(() => setHeroElements(prev => [prev[0], prev[1], prev[2], true]), 900); // form
+          setTimeout(() => setHeroElements(prev => [true, prev[1], prev[2], prev[3]]), 50); // title
+          setTimeout(() => setHeroElements(prev => [prev[0], true, prev[2], prev[3]]), 100); // date
+          setTimeout(() => setHeroElements(prev => [prev[0], prev[1], true, prev[3]]), 2000); // speakers (after text completes)
+          setTimeout(() => setHeroElements(prev => [prev[0], prev[1], prev[2], true]), 800); // form
         }
         // Removed the else if block to prevent animation reset on scroll back
       },

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = ({ footerVisible, footerRef, footerElements }) => {
   return (
-    <footer ref={footerRef} className={`w-full h-[200px] md:h-[300px] relative footer-container  md:mt-0 mb-8 md:mb-0 ${footerVisible ? 'animate' : ''}`}>
-      <div className='py-[5px] mt-4 md:mt-0 md:py-[10px] flex flex-col lg:flex-row justify-center md:justify-start items-center md:items-start px-8 md:px-8 lg:gap-[16rem] gap-2' style={{ paddingLeft: '2rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
+    <footer ref={footerRef} className={`w-full h-[200px] md:h-[300px] relative footer-container  lg:ml-8  md:mt-0 mb-8 md:mb-0 ${footerVisible ? 'animate' : ''}`}>
+      <div className='py-[5px] mt-4 md:mt-0 md:py-[10px] flex flex-col lg:flex-row justify-center md:justify-start items-center md:items-start lg:gap-[20rem] gap-2' style={{ paddingLeft: '2rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
         <div className={`text-white text-3xl md:text-5xl font-normal footer-left text-center md:text-left ${footerElements[0] ? 'animate' : ''}`}>
           Transform <br /> Roadmaps into Wins
         </div>

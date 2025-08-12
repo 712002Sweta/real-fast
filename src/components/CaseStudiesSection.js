@@ -79,7 +79,7 @@ const CaseStudiesSection = ({ caseStudiesVisible, caseStudiesRef, caseStudyItems
               
               {/* Mobile Divider - Only show between first and second case study */}
               {index === 0 && (
-                <div className={`md:hidden w-full h-px bg-[#BFDBFE] col-span-1 md:col-span-2 case-study-divider ${caseStudyItems[index] ? 'animate' : ''}`}></div>
+                <div className={`md:hidden w-full h-px bg-[#BFDBFE]/15 col-span-1 md:col-span-2 case-study-divider ${caseStudyItems[index] ? 'animate' : ''}`}></div>
               )}
             </React.Fragment>
           ))}
