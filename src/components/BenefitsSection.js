@@ -10,8 +10,8 @@ const BenefitsSection = ({ benefitsVisible, benefitsRef, benefitItems }) => {
         <div className='w-full flex flex-col gap-8 md:gap-16 max-w-4xl lg:flex-row px-8 md:px-0' style={{ paddingLeft: '2rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '9rem', paddingRight: '8rem' } }}>
           {/* Left side */}
           <div className={`flex flex-col gap-1 max-w-md benefit-left text-left ${benefitsVisible ? 'animate' : ''}`}>
-            <div className='text-[rgba(191,219,254,1)] font-medium text-lg py-2'>The Benefits</div>
-            <div className='text-white font-normal text-3xl md:text-4xl lg:text-4xl leading-tight'>
+            <div className='text-[rgba(191,219,254,1)] font-medium text-lg py-2 text-left md:text-left'>The Benefits</div>
+            <div className='text-white font-normal text-2xl md:text-4xl lg:text-4xl leading-tight text-left md:text-left'>
               Stop Salesforce <br /> Delivery Blocking AI
             </div>
           </div>

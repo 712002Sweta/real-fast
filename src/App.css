@@ -77,6 +77,13 @@
   }
 }
 
+/* Reset background transform on desktop */
+@media (min-width: 768px) {
+  .hero-transform-section img[alt="Background"] {
+    transform: none !important;
+  }
+}
+
 .corner-bottom-left {
   position: relative;
 }

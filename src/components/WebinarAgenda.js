@@ -42,8 +42,8 @@ const WebinarAgenda = ({ agendaVisible, agendaRef }) => {
                       {/* Grid Item 1 - Webinar Agenda Title */}
             <div className="p-3 md:p-8 border-0 md:border-b md:border-r border-gray-700/40 corner-bottom-right">
             <div className="h-full flex flex-col justify-center">
-              <p className="text-sm text-gray-400 font-normal mb-2 md:mb-3">Webinar Agenda</p>
-              <h2 className="text-lg md:text-2xl font-medium leading-snug text-white/64">
+              <p className="text-lg text-gray-400 font-normal mb-3 md:mb-3">Webinar Agenda</p>
+              <h2 className="text-2xl md:text-2xl font-medium leading-snug text-white/64">
                 Why traditional IT delivery models are failing in the AI era.
               </h2>
             </div>

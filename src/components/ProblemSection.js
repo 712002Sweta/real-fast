@@ -23,15 +23,15 @@ const ProblemSection = ({ problemVisible, problemRef }) => {
           <div ref={problemRef} className={`relative pt-24 pb-4 px-8 md:px-48 problem-container ${problemVisible ? 'animate' : ''}`}>
       <div className="max-w-6xl mx-auto text-white">
         {/* Section Title */}
-                  <div className="text-left mb-20">
-            <h2 className={`text-lg font-normal text-[#BFDBFE] ml-0 md:ml-24 mb-3 problem-title ${problemVisible ? 'animate' : ''}`}>The Problem</h2>
-            <h1 className={`text-2xl md:text-3xl ml-0 md:ml-24 font-normal leading-tight problem-headline ${problemVisible ? 'animate' : ''}`}>
+                  <div className="text-left mb-10 md:mb-20">
+            <div className={`text-lg font-normal text-[#BFDBFE] ml-4 md:ml-24 mb-3 problem-title ${problemVisible ? 'animate' : ''}`}>The Problem</div>
+            <div className={`text-2xl md:text-3xl ml-4 md:ml-24 font-normal leading-tight problem-headline ${problemVisible ? 'animate' : ''}`}>
               Leadership Expects AI Results. Teams Deliver at Legacy Speed.
-            </h1>
+            </div>
           </div>
 
         {/* Three Column Layout */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-1 ml-0 md:ml-24">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-1 ml-0 md:ml-24">
           {problemItems.map((item, index) => (
             <div
               key={index}

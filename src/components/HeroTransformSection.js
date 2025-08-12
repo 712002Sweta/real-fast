@@ -251,6 +251,20 @@ const HeroTransformSection = () => {
     };
   }, [footerVisible]);
 
+  // Parallax effect for mobile
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth < 768) { // Only on mobile
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5; // Parallax speed
+        document.documentElement.style.setProperty('--scroll-y', `${rate}px`);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Form submission handler - matches the HTML/JS version exactly
   const handleWebinarRegistration = async (e) => {
     e.preventDefault();
@@ -366,13 +380,16 @@ const HeroTransformSection = () => {
 
 
   return (
-    <section className="relative min-h-screen overflow-hidden px-4 md:px-0">
+    <section className="relative min-h-screen overflow-hidden px-4 md:px-0 hero-transform-section">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={webpageBg}
           alt="Background"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center transform-gpu transition-transform duration-300 ease-out md:transform-none"
+          style={{
+            transform: 'translateY(calc(var(--scroll-y, 0px) - 100px))'
+          }}
         />
       </div>
 

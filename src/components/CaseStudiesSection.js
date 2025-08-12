@@ -19,15 +19,15 @@ const CaseStudiesSection = ({ caseStudiesVisible, caseStudiesRef, caseStudyItems
   ];
 
   return (
-    <section className="w-full h-[800px] md:h-[700px] text-white pt-4 md:pt-0 pb-0">
+    <section className="w-full h-[800px] px-4 md:px-0 md:h-[700px] text-white pt-4 md:pt-0 pb-0">
       <div ref={caseStudiesRef} className={`w-full flex flex-col items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '3rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
         {/* Heading */}
-                  <h1 className={`font-normal text-3xl md:text-4xl mb-3 md:mb-16 py-1 md:py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
+                  <h1 className={`font-normal text-2xl md:text-4xl mb-8 md:mb-16 py-1 md:py-7 case-study-title ${caseStudiesVisible ? 'animate' : ''}`}>
             Case Studies
           </h1>
 
           {/* Case Study Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-20 max-w-6xl w-full items-stretch pl-0 md:pl-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 max-w-6xl w-full items-stretch px-2 md:px-0 pl-0 md:pl-20">
           {companyData.map((data, index) => (
                           <div
                 key={index}
@@ -35,18 +35,18 @@ const CaseStudiesSection = ({ caseStudiesVisible, caseStudiesRef, caseStudyItems
                 style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', minHeight: '220px' }}
               >
                               {/* Company Name */}
-                <h2 className="text-base md:text-lg font-light">{data.company}</h2>
+                <div className="text-base md:text-xl font-light">{data.company}</div>
 
                 {/* Challenge */}
                 <div className="flex-shrink-0">
-                  <p className="text-[#BFDBFE] font-normal text-sm md:text-base mb-1">Challenge</p>
-                  <p className="text-gray-400 font-normal text-lg md:text-xl">{data.challenge}</p>
+                  <p className="text-[#BFDBFE] font-normal text-lg md:text-base mb-1">Challenge</p>
+                  <p className="text-gray-400 font-normal text-base md:text-xl">{data.challenge}</p>
                 </div>
 
                 {/* Scope */}
                 <div className="flex-shrink-0">
-                  <p className="text-[#BFDBFE] mb-1 font-normal text-sm md:text-base">Scope</p>
-                  <div className="text-gray-400 font-normal text-lg md:text-xl">
+                  <p className="text-[#BFDBFE] mb-1 font-normal text-lg md:text-base">Scope</p>
+                  <div className="text-gray-400 font-normal text-base md:text-xl">
                     <div>{data.scope}</div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const CaseStudiesSection = ({ caseStudiesVisible, caseStudiesRef, caseStudyItems
                 <div className="relative flex-shrink-0">
                   <p className="text-blue-400 mb-1 font-normal text-sm md:text-base">Results</p>
                   <div className="relative">
-                    <p className="font-semibold tracking-tighter text-2xl md:text-3xl max-w-sm">{data.results}</p>
+                    <p className="font-semibold tracking-tighter text-xl md:text-3xl max-w-sm">{data.results}</p>
                                       {/* Vector underline - responsive positioning for different screen sizes */}
                     <img
                       src={index === 0 ? vector10Icon : vector11Icon}

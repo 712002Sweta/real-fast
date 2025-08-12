@@ -1,11 +1,7 @@
 import React from 'react';
 import calendarIcon from '../assets/hero-section/calendar.png';
-import cloudIcon from '../assets/hero-section/cloud.png';
-import vectorIcon from '../assets/hero-section/Vector.png';
-import speaker1 from '../assets/hero-section/speaker1.png';
-import speaker2 from '../assets/hero-section/speaker2.png';
-import speaker3 from '../assets/hero-section/speaker3.png';
 import salesforceLogo from '../assets/hero-section/saleforce-logo.png';
+import SpeakersSection from './SpeakersSection';
 
 const HeroSection = ({ 
   heroVisible, 
@@ -20,91 +16,42 @@ const HeroSection = ({
     <div ref={heroRef} className={`relative z-10 flex min-h-[80vh] md:min-h-screen pt-0 hero-container ${heroVisible ? 'animate' : ''}`}>
       {/* Left Section - Webinar Details & Speakers */}
       <div className="flex-1 flex md:flex-col flex-row justify-start items-start md:items-center pt-12 md:pt-36 pl-6 pr-6 md:pl-52 md:pr-40">
-        <div className="max-w-2xl w-full">
+        <div className="max-w-2xl w-full" style={{ width: '100%' }}>
           {/* Webinar Introduction */}
-          <p className={`text-gray-400 text-xs md:text-lg font-normal mb-2 md:mb-6 hero-title text-left ${heroElements[0] ? 'animate' : ''}`}>
+          <p className={`text-gray-400 text-lg md:text-lg font-normal mb-2 md:mb-6 hero-title text-left ${heroElements[0] ? 'animate' : ''}`}>
             Join us for an exclusive webinar
           </p>
 
           {/* Main Title */}
-          <h1 className={`text-[#FAFAFA] text-xl md:text-5xl font-normal mb-1 md:mb-3 hero-title text-left ${heroElements[0] ? 'animate' : ''}`}>
+          <h1 className={`text-[#FAFAFA] text-5xl md:text-5xl font-normal mb-2 md:mb-3 hero-title text-left ${heroElements[0] ? 'animate' : ''}`}>
             AI-Ready Salesforce
           </h1>
 
           {/* Sub-headline */}
-          <div className={`mb-3 md:mb-8 hero-title ${heroElements[0] ? 'animate' : ''}`}>
-            <h2 className="text-[#FAFAFA] text-base md:text-3xl font-normal text-left">
+          <div className={`mb-2 md:mb-8 hero-title ${heroElements[0] ? 'animate' : ''}`}>
+            <h2 className="text-[#FAFAFA] text-3xl md:text-3xl font-normal text-left">
               Transform Your Delivery Speed
             </h2>
           </div>
 
           {/* Date and Time */}
           <div className={`flex items-center space-x-2 md:space-x-4 mb-4 md:mb-10 hero-date ${heroElements[1] ? 'animate' : ''}`}>
-            <img src={calendarIcon} alt="Calendar" className="w-3 h-3 md:w-6 md:h-6" />
-            <span className="text-[#FAFAFA] text-xs md:text-xl text-left">13 August, 2:00 PM SGT (45 min)</span>
+            <img src={calendarIcon} alt="Calendar" className="w-3 h-3 md:w-6 md:h-6 mb-2 md:mb-0" />
+            <span className="text-[#FAFAFA] text-xl md:text-xl text-left mb-2 md:mb-0">13 August, 2:00 PM SGT (45 min)</span>
           </div>
 
                       {/* Speakers Section */}
-            <div className={`flex flex-row justify-start md:justify-start space-x-6 md:space-x-10 hero-speakers ${heroElements[2] ? 'animate' : ''}`}>
-              {/* Speaker 1 - Heather */}
-              <div className="flex flex-col items-start md:items-start w-24 md:w-40">
-                <div className="relative mb-2 md:mb-3">
-                  <img src={speaker3} alt="Heather Mao" className="w-[40px] h-[40px] md:w-[84px] md:h-[84px] rounded-full" />
-                  {/* Cloud Icon */}
-                  <img
-                    src={cloudIcon}
-                    alt="Cloud"
-                    className="absolute -bottom-1 -left-1 w-4 h-3 md:w-8 md:h-6 z-10"
-                  />
-                </div>
-                <div className="flex flex-col items-start md:items-start">
-                  <p className="text-white text-sm md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Heather Mao</p>
-                  <p className="text-white text-xs opacity-80 mb-0 md:block">Strategic Account</p>
-                  <p className="text-white text-xs opacity-80 mb-0 md:block">Director - Agentforce</p>
-                  <p className="text-white text-xs opacity-80 md:block">Salesforce</p>
-                </div>
-              </div>
-
-              {/* Speaker 2 - Sidu */}
-              <div className="flex flex-col items-start md:items-start w-24 md:w-40">
-                <div className="relative mb-2 md:mb-3">
-                  <img src={speaker1} alt="Sidu Ponnapa" className="w-[40px] h-[40px] md:w-[84px] md:h-[84px] rounded-full" />
-                  {/* Vector Icon */}
-                  <img
-                    src={vectorIcon}
-                    alt="Vector"
-                    className="absolute -bottom-1 -left-1 w-4 h-3 md:w-8 md:h-4 z-10"
-                  />
-                </div>
-                <div className="flex flex-col items-start md:items-start">
-                  <p className="text-white text-sm md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Sidu Ponnapa</p>
-                  <p className="text-white text-xs opacity-80 mb-0 md:block">CEO & Co-Founder</p>
-                  <p className="text-white text-xs opacity-80 md:block">realfast</p>
-                </div>
-              </div>
-
-              {/* Speaker 3 - Aakash */}
-              <div className="flex flex-col items-start md:items-start w-24 md:w-40">
-                <div className="relative mb-2 md:mb-3">
-                  <img src={speaker2} alt="Aakash Dharmadhikari" className="w-[40px] h-[40px] md:w-[84px] md:h-[84px] rounded-full" />
-                  {/* Vector Icon */}
-                  <img
-                    src={vectorIcon}
-                    alt="Vector"
-                    className="absolute -bottom-1 -left-1 w-4 h-3 md:w-8 md:h-4 z-10"
-                  />
-                </div>
-                <div className="flex flex-col items-start md:items-start">
-                  <p className="text-white text-sm md:text-xl font-semibold mt-0 md:mt-1 mb-0 md:mb-1 text-left leading-tight">Aakash<br />Dharmadhikari</p>
-                  <p className="text-white text-xs opacity-80 md:block">CPTO & Co-Founder, Realfast</p>
-                </div>
-              </div>
+            <div className="w-full overflow-hidden">
+              <SpeakersSection 
+                heroElements={heroElements}
+                isVisible={heroElements[2]}
+              />
             </div>
         </div>
       </div>
 
               {/* Right Section - Registration Form */}
-        <div className={`flex-1 flex items-start justify-start pr-6 md:pr-40 pt-8 md:pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
+        <div className={`flex-1 flex items-start justify-start pr-6 md:pr-48 pt-8 md:pt-36 hero-form ${heroElements[3] ? 'animate' : ''}`}>
         <div className="w-full max-w-lg">
           <div className="flex justify-center mb-4 md:mb-8">
             <img src={salesforceLogo} alt="Salesforce" className="h-12 md:h-16 w-auto" />
@@ -114,7 +61,7 @@ const HeroSection = ({
             <div className="absolute inset-0 rounded-2xl opacity-32 p-[0.5px]">
               <div className="w-full h-full bg-black/40 rounded-2xl"></div>
             </div>
-            <div className="relative z-10 p-4 md:p-8">
+            <div className="relative z-10 p-4 md:p-8 mb-12 md:mb-0">
               <form className="space-y-3 md:space-y-4" id="webinar-registration" onSubmit={handleWebinarRegistration}>
                 {/* Full Name Field */}
                 <div className="form-group">
