@@ -19,7 +19,7 @@ const CaseStudiesSection = ({ caseStudiesVisible, caseStudiesRef, caseStudyItems
   ];
 
   return (
-    <section className="w-full h-[950px] px-5 md:px-0 md:h-[700px] text-white pt-12 md:pt-0 pb-0">
+    <section className="w-full h-[850px] px-5 md:px-0 md:h-[700px] text-white pt-12 md:pt-0 pb-0">
       <div ref={caseStudiesRef} className={`w-full flex flex-col items-start md:items-center case-studies-container ${caseStudiesVisible ? 'animate' : ''}`} style={{ paddingLeft: '3rem', paddingRight: '2rem', '@media (min-width: 768px)': { paddingLeft: '13rem', paddingRight: '11rem' } }}>
         {/* Heading */}
                   <h1 className={`font-normal text-2xl md:text-4xl mb-8 md:mb-16 py-1 md:py-7 case-study-title text-left md:text-center ${caseStudiesVisible ? 'animate' : ''}`}>

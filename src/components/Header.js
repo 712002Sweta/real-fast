@@ -170,7 +170,7 @@ const Header = () => {
             {/* CTA */}
             <div className="mt-6 relative z-10">
               <a href="https://www.realfast.ai/contact" onClick={closeMenu} className="block">
-                <button className="w-full bg-gray-900/50 py-3 px-6 rounded-xl border border-gray-100/20 text-[10px] text-white hover:bg-gray-800/50 transition-all duration-200 cursor-pointer">
+                <button className="w-full bg-gray-900/50 py-3 px-2 font-medium rounded-xl border border-gray-100/20 text-sm  text-white hover:bg-gray-800/50 transition-all duration-200 cursor-pointer">
                   Start Free Pilot
                 </button>
               </a>
