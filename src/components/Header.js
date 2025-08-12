@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <header className="relative z-10 w-full">
-      <div className="flex flex-row justify-between items-center px-2 md:px-52 py-3 md:py-4">
+      <div className="flex flex-row justify-between items-center md:px-52 py-3 md:py-4">
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <span className="text-white text-xs md:text-xl font-normal">Exo by</span>
